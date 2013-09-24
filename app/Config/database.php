@@ -63,7 +63,8 @@ class DATABASE_CONFIG {
     function __construct() {
         $url = parse_url(getenv('HEROKU_POSTGRESQL_ONYX_URL'));
         $this->default = array(
-            'driver' => 'postgresql'
+            'datasource' => 'Database/Postgres',
+            'persistent' => false,
             'host' => $url['host'],
             'login' => $url['user'],
             'password' => $url['pass'],
