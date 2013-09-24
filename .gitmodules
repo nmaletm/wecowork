@@ -1,3 +1,0 @@
-[submodule "thirdparty/CakePHP"]
-	path = thirdparty/CakePHP
-	url = https://github.com/cakephp/cakephp.git
