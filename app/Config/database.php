@@ -60,26 +60,14 @@
  * For Sql Server : http://msdn.microsoft.com/en-us/library/ms190356.aspx
  */
 class DATABASE_CONFIG {
-
-	public $default = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'database_name',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
-
-	public $test = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'test_database_name',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
+    function __construct() {
+        $url = parse_url(getenv('HEROKU_POSTGRESQL_ONYX_URL'));
+        $this->default = array(
+            'host' => $url['host'],
+            'login' => $url['user'],
+            'password' => $url['pass'],
+            'database' => substr($url['path'],1),
+        );
+        $this->test = array();
+    }
 }
