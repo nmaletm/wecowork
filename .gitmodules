@@ -1,6 +1,6 @@
 [submodule "app/Plugin/DebugKit"]
 	path = app/Plugin/DebugKit
 	url = https://github.com/cakephp/debug_kit.git
-[submodule "plugins/TwitterBootstrap"]
-	path = plugins/TwitterBootstrap
+[submodule "app/Plugin/BoostCake"]
+	path = app/Plugin/BoostCake
 	url = https://github.com/slywalker/cakephp-plugin-boost_cake.git
