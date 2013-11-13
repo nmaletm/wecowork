@@ -22,8 +22,7 @@ class UserController extends AppController {
 				'name' => $this->request->data['name'],
 				'password' => md5($this->request->data['password']),				
 			);
-			$User = new User();
-			$User->create();
+			$this->User->create();
 			$User->set($data);
 			$User->save();
 		}
