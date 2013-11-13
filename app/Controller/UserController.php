@@ -11,7 +11,7 @@ class UserController extends AppController {
 
 	public function register($view = null) {
 
-		if($this->request->data['email']){
+		if($this->request->is('post')){
 
 			if($this->request->data['password'] != $this->request->data['password2']){
 				//TODO: mostrar error!

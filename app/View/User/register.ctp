@@ -20,7 +20,8 @@
 		'placeholder' => 'contrasenya'
 	)); ?>
 	<?php echo $this->Form->input('password2', array(
-		'placeholder' => 'Repetir contrasenya'
+		'placeholder' => 'Repetir contrasenya',
+		'type' => 'password'
 	)); ?>
 	<?php echo $this->Form->input('remember', array(
 		'wrapInput' => 'col col-md-9 col-md-offset-3',
