@@ -10,6 +10,9 @@
 	'class' => 'well form-horizontal',
 	'method' => 'post'
 )); ?>
+	<?php echo $this->Form->input('username', array(
+		'placeholder' => "Nom d\'usuari"
+	)); ?>
 	<?php echo $this->Form->input('name', array(
 		'placeholder' => 'Nom'
 	)); ?>
