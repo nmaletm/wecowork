@@ -1,0 +1,5 @@
+
+
+heroku run bash
+
+bin/php www/app/Console/cake.php schema generate

@@ -5,8 +5,7 @@ class UserController extends AppController {
 	var $uses = array('User');
 
 	public function index($view = null) {
-		debug($this->User->findAll());
-		$this->set('usuaris', $this->User->findAll());
+
 	}
 
 	public function register($view = null) {
@@ -31,13 +30,9 @@ class UserController extends AppController {
 	public function login($view = null) {
 		if($this->request->is('post')){
 
-			if($this->data['RegisterForm']['password'] != $this->data['RegisterForm']['password2']){
-				//TODO: mostrar error!
-			}
-
 			$data = array(
-				'username' => $this->data['RegisterForm']['username'],
-				'password' => md5($this->data['RegisterForm']['password']),				
+				'username' => $this->data['LoginForm']['username'],
+				'password' => md5($this->data['LoginForm']['password']),				
 			);
 			$this->User->create();
 			$this->User->get($data);

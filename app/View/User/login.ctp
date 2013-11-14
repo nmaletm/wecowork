@@ -1,4 +1,4 @@
-<?php echo $this->Form->create('RegisterForm', array(
+<?php echo $this->Form->create('LoginForm', array(
 	'inputDefaults' => array(
 		'div' => 'form-group',
 		'label' => array(
@@ -13,18 +13,8 @@
 	<?php echo $this->Form->input('username', array(
 		'placeholder' => "Nom d'usuari"
 	)); ?>
-	<?php echo $this->Form->input('name', array(
-		'placeholder' => 'Nom'
-	)); ?>
-	<?php echo $this->Form->input('email', array(
-		'placeholder' => 'Email'
-	)); ?>
 	<?php echo $this->Form->input('password', array(
 		'placeholder' => 'contrasenya'
-	)); ?>
-	<?php echo $this->Form->input('password2', array(
-		'placeholder' => 'Repetir contrasenya',
-		'type' => 'password'
 	)); ?>
 	<div class="form-group">
 		<?php echo $this->Form->submit('Registrar', array(
