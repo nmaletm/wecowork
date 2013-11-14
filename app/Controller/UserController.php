@@ -30,13 +30,14 @@ class UserController extends AppController {
 	public function login($view = null) {
 		if($this->request->is('post')){
 
-			$data = array(
-				'username' => $this->data['LoginForm']['username'],
-				'password' => md5($this->data['LoginForm']['password']),				
-			);
-			$this->User->create();
-			$this->User->get($data);
-			if($this->User){
+			$user = $this->User->find('first', array(
+				'conditions' => array(
+						'User.username' => $this->data['LoginForm']['username'],
+						'User.password' => $this->data['LoginForm']['password'],
+				)
+			));
+
+        	if ($user) {
 				$this->redirect('/home/');
 			}
 		}
