@@ -13,18 +13,18 @@ class UserController extends AppController {
 
 		if($this->request->is('post')){
 
-			if($this->request->data['password'] != $this->request->data['password2']){
+			if($this->data['RegisterForm']['password'] != $this->data['RegisterForm']['password2']){
 				//TODO: mostrar error!
 			}
 
 			$data = array(
-				'email' => $this->request->data['email'],
-				'name' => $this->request->data['name'],
-				'password' => md5($this->request->data['password']),				
+				'email' => $this->data['RegisterForm']['email'],
+				'name' => $this->data['RegisterForm']['name'],
+				'password' => md5($this->data['RegisterForm']['password']),				
 			);
 			$this->User->create();
-			$User->set($data);
-			$User->save();
+			$this->User->set($data);
+			$this->User->save();
 		}
 	}
 }

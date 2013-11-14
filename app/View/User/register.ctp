@@ -1,4 +1,4 @@
-<?php echo $this->Form->create('BoostCake', array(
+<?php echo $this->Form->create('RegisterForm', array(
 	'inputDefaults' => array(
 		'div' => 'form-group',
 		'label' => array(
