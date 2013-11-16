@@ -1,7 +1,7 @@
 <?php
 class UsersController extends AppController {
 
-	var $name = 'User';	
+	var $name = 'Users';
 	var $uses = array('User');
 
     public function beforeFilter() {
