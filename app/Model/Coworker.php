@@ -1,7 +1,8 @@
 <?php
 App::uses('User', 'Model');
 class Coworker extends User{
-	var $name = 'Coworker';
+	public $name = 'Coworker';
+	public $actsAs = array( 'Inherit' ); 
 
 	public $_schema = array(
 		'projectsInformation' => array('type' => 'text'),

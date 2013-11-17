@@ -1,8 +1,8 @@
 <?php
 class User extends AppModel{
 
-	var $name = 'User';
-	var $primaryKey = 'id';
+	public $name = 'User';
+	public $primaryKey = 'id';
 
 	public $_schema = array(
 		'id' => array('type' => 'integer'),
