@@ -25,7 +25,7 @@ class UsersController extends AppController {
     public function add() {
         if ($this->request->is('post')) {
 
-            if($this->request->data['type'] == 'coworker'){
+            if($this->request->data['Coworker']){
                 $this->Coworker->create();
                 if ($this->Coworker->save($this->request->data)) {
                     $this->Session->setFlash("S'ha guardat l'usuari correctament");
