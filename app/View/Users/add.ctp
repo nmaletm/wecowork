@@ -5,7 +5,7 @@
         <legend><?php echo 'Registrar'; ?></legend>
         <?php echo $this->Form->input('username');
         echo $this->Form->input('password'); 
-        echo $this->Form->input('role', array(
+        echo $this->Form->input('type', array(
             'options' => array('coworker' => 'Coworker', 'empresa' => 'Empresa de cowork')
         ));
     ?>
