@@ -2,7 +2,7 @@
 class User extends AppModel{
 
 	var $name = 'User';
-	var $primaryKey = 'id';
+	var $primaryKey = 'username';
 
 	public $validate = array(
 		'username' => array(
