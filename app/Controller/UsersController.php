@@ -24,13 +24,13 @@ class UsersController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
-            $this->User->username = ($this->request->data['Coworker']['username'])?
+            $username = ($this->request->data['Coworker']['username'])?
                                     $this->request->data['Coworker']['username']:
                                     $this->request->data['Company']['username'];
-            debug(($this->request->data['Coworker']['username'])?
-                                    $this->request->data['Coworker']['username']:
-                                    $this->request->data['Company']['username']);
-            if ($this->User->exists()) {
+            $user = $this->User->find('first', array(
+                'conditions' => array('User.username' => $username)
+            ));
+            if($user) {
                 $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
             }
             else{
