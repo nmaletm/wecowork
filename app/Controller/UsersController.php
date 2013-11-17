@@ -60,7 +60,7 @@ class UsersController extends AppController {
             else{
                 $this->Company->create();
                 debug($this->Company);
-                $this->Company->set($this->request->data)
+                $this->Company->set($this->request->data);
                 debug($this->Company);
                 if ($this->Company->save()) {
                     $this->Session->setFlash("S'ha guardat l'usuari correctament");

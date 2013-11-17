@@ -7,22 +7,31 @@ heroku run bash
 bin/php www/app/Console/cake.php schema generate
 
 
+DROP TABLE users;
+DROP TABLE coworkers;
+DROP TABLE companies;
 
-
-CREATE TABLE users
-(
+CREATE TABLE users(
+  id integer,
   username character varying(50) NOT NULL,
   password character varying(60) DEFAULT NULL::character varying,
   birthdate date,
-  mail character varying(50) DEFAULT NULL::character varying,
+  email character varying(50) DEFAULT NULL::character varying,
   name character varying(50) DEFAULT NULL::character varying,
   sexe character varying(50) DEFAULT NULL::character varying,
   website character varying(50) DEFAULT NULL::character varying,
-  id integer,
-  CONSTRAINT users_pkey PRIMARY KEY (username)
-)
-WITH (
-  OIDS=FALSE
+  CONSTRAINT users_pkey PRIMARY KEY (id)
 );
-ALTER TABLE users
-  OWNER TO sxsyrgjtoevdjf;
+
+CREATE TABLE coworkers(
+  id integer references users(id),
+  projectsInformation character varying(500) DEFAULT NULL::character varying,
+  professionalInformation character varying(500) DEFAULT NULL::character varying,
+  personalInformation character varying(500) DEFAULT NULL::character varying
+);
+
+CREATE TABLE companies(
+  id integer references users(id),
+  nif character varying(50) DEFAULT NULL::character varying,
+  address character varying(50) DEFAULT NULL::character varying
+);
