@@ -1,5 +1,28 @@
+Seguir aquests passos:
 
+cd Path_Root_Projecte
 
 heroku run bash
 
 bin/php www/app/Console/cake.php schema generate
+
+
+
+
+CREATE TABLE users
+(
+  username character varying(50) NOT NULL,
+  password character varying(60) DEFAULT NULL::character varying,
+  birthdate date,
+  mail character varying(50) DEFAULT NULL::character varying,
+  name character varying(50) DEFAULT NULL::character varying,
+  sexe character varying(50) DEFAULT NULL::character varying,
+  website character varying(50) DEFAULT NULL::character varying,
+  id integer,
+  CONSTRAINT users_pkey PRIMARY KEY (username)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE users
+  OWNER TO sxsyrgjtoevdjf;

@@ -40,12 +40,18 @@ class UsersController extends AppController {
                         $this->Session->setFlash("S'ha guardat l'usuari correctament");
                         return $this->redirect(array('action' => 'index'));
                     }
+                    else{
+                        debug($this->validationErrors);
+                    }
                 }
                 else{
                     $this->Company->create();
                     if ($this->Company->save($this->request->data)) {
                         $this->Session->setFlash("S'ha guardat l'usuari correctament");
                         return $this->redirect(array('action' => 'index'));
+                    }
+                    else{
+                        debug($this->validationErrors);
                     }
                 }
                 $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");        
