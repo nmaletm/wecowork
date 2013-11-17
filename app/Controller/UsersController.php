@@ -29,21 +29,21 @@ class UsersController extends AppController {
                 $this->Session->setFlash("S'ha guardat l'usuari correctament");
                 return $this->redirect(array('action' => 'index'));
             }
-            $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+            $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");
         }
     }
 
     public function edit($id = null) {
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException("Usuari invàlid");
         }
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved'));
+                $this->Session->setFlash("L'usuari s'ha guardat correctament");
                 return $this->redirect(array('action' => 'index'));
             }
-            $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+            $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");
         } else {
             $this->request->data = $this->User->read(null, $id);
             unset($this->request->data['User']['password']);
@@ -55,13 +55,13 @@ class UsersController extends AppController {
 
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException("Usuari invàlid");
         }
         if ($this->User->delete()) {
-            $this->Session->setFlash(__('User deleted'));
+            $this->Session->setFlash("S'ha esborrat l'usuari correctament");
             return $this->redirect(array('action' => 'index'));
         }
-        $this->Session->setFlash(__('User was not deleted'));
+        $this->Session->setFlash("L'usuari no s'ha esborrat");
         return $this->redirect(array('action' => 'index'));
     }
 
@@ -70,7 +70,7 @@ class UsersController extends AppController {
             if ($this->Auth->login()) {
                 return $this->redirect($this->Auth->redirect());
             }
-            $this->Session->setFlash(__('Invalid username or password, try again'));
+            $this->Session->setFlash("Usuari incorrecte");
         }
     }
 

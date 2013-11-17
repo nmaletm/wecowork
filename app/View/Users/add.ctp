@@ -2,13 +2,13 @@
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
     <fieldset>
-        <legend><?php echo __('Add User'); ?></legend>
+        <legend><?php echo 'Registrar'; ?></legend>
         <?php echo $this->Form->input('username');
-        echo $this->Form->input('password');
+        echo $this->Form->input('password'); 
         echo $this->Form->input('role', array(
-            'options' => array('admin' => 'Admin', 'author' => 'Author')
+            'options' => array('coworker' => 'Coworker', 'empresa' => 'Empresa de cowork')
         ));
     ?>
     </fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end('Registrar'); ?>
 </div>
