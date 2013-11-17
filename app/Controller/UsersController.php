@@ -28,11 +28,8 @@ class UsersController extends AppController {
 
     public function addCoworker() {
         if ($this->request->is('post')) {
-            $username = ($this->request->data['Coworker']['username'])?
-                                    $this->request->data['Coworker']['username']:
-                                    $this->request->data['Company']['username'];
             $user = $this->User->find('first', array(
-                'conditions' => array('User.username' => $username)
+                'conditions' => array('User.username' => $this->request->data['Coworker']['username'])
             ));
             if($user) {
                 $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
@@ -54,18 +51,18 @@ class UsersController extends AppController {
 
     public function addCompany() {
         if ($this->request->is('post')) {
-            $username = ($this->request->data['Coworker']['username'])?
-                                    $this->request->data['Coworker']['username']:
-                                    $this->request->data['Company']['username'];
             $user = $this->User->find('first', array(
-                'conditions' => array('User.username' => $username)
+                'conditions' => array('User.username' => $this->request->data['Company']['username'])
             ));
             if($user) {
                 $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
             }
             else{
                 $this->Company->create();
-                if ($this->Company->save($this->request->data)) {
+                debug($this->Company);
+                $this->Company->set($this->request->data)
+                debug($this->Company);
+                if ($this->Company->save()) {
                     $this->Session->setFlash("S'ha guardat l'usuari correctament");
                     return $this->redirect(array('action' => 'index'));
                 }
