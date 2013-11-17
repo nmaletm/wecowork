@@ -24,23 +24,29 @@ class UsersController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
-
-            if($this->request->data['Coworker']){
-                $this->Coworker->create();
-                if ($this->Coworker->save($this->request->data)) {
-                    $this->Session->setFlash("S'ha guardat l'usuari correctament");
-                    return $this->redirect(array('action' => 'index'));
-                }
+            $this->User->id = ($this->request->data['Coworker']['username'])?
+                                    $this->request->data['Coworker']['username']:
+                                    $this->request->data['Company']['username'];
+            if (!$this->User->exists()) {
+                $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
             }
             else{
-                $this->Company->create();
-                if ($this->Company->save($this->request->data)) {
-                    $this->Session->setFlash("S'ha guardat l'usuari correctament");
-                    return $this->redirect(array('action' => 'index'));
+                if($this->request->data['Coworker']){
+                    $this->Coworker->create();
+                    if ($this->Coworker->save($this->request->data)) {
+                        $this->Session->setFlash("S'ha guardat l'usuari correctament");
+                        return $this->redirect(array('action' => 'index'));
+                    }
                 }
+                else{
+                    $this->Company->create();
+                    if ($this->Company->save($this->request->data)) {
+                        $this->Session->setFlash("S'ha guardat l'usuari correctament");
+                        return $this->redirect(array('action' => 'index'));
+                    }
+                }
+                $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");        
             }
-            
-            $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");
         }
     }
 

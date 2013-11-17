@@ -2,6 +2,7 @@
 <div class="users form">
 <?php echo $this->Form->create('Coworker'); ?>
     <fieldset>
+	    <legend>Registrar Coworker</legend>
     <?php
         echo $this->Form->input('name', array('label' => 'Nom'));
         echo $this->Form->input('username', array('label' => "Nom d'usuari"));
@@ -14,6 +15,7 @@
 <div class="users form">
 <?php echo $this->Form->create('Company'); ?>
     <fieldset>
+	    <legend>Registrar Empresa</legend>
     <?php
         echo $this->Form->input('name', array('label' => 'Nom'));
         echo $this->Form->input('username', array('label' => "Nom d'usuari"));
