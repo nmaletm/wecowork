@@ -6,7 +6,7 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add');
+        $this->Auth->allow('add','addCoworker','addCompany');
     }
 
     public function index() {
