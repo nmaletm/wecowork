@@ -1,8 +1,8 @@
 <?php
-App::uses('User', 'Model');
+App::uses('Model', 'User');
 class Company extends User{
 	public $name = 'Company';
-	public $actsAs = array( 'Inherit' ); 
+	public $actsAs = array('Inherit'); 
 
 	public $_schema = array(
 		'nif' => array(
@@ -14,5 +14,5 @@ class Company extends User{
 			'length' => 50
 		),
 	);
-	
+
 }
