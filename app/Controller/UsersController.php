@@ -41,7 +41,8 @@ class UsersController extends AppController {
                         return $this->redirect(array('action' => 'index'));
                     }
                     else{
-                        debug($this->validationErrors);
+                        debug($this->Coworker->validationErrors);
+                        debug($this->Coworker->invalidFields());
                     }
                 }
                 else{
@@ -51,7 +52,8 @@ class UsersController extends AppController {
                         return $this->redirect(array('action' => 'index'));
                     }
                     else{
-                        debug($this->validationErrors);
+                        debug($this->Company->validationErrors);
+                        debug($this->Company->invalidFields);
                     }
                 }
                 $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");        
