@@ -27,7 +27,10 @@ class UsersController extends AppController {
             $this->User->username = ($this->request->data['Coworker']['username'])?
                                     $this->request->data['Coworker']['username']:
                                     $this->request->data['Company']['username'];
-            if (!$this->User->exists()) {
+            debug(($this->request->data['Coworker']['username'])?
+                                    $this->request->data['Coworker']['username']:
+                                    $this->request->data['Company']['username'];);
+            if ($this->User->exists()) {
                 $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
             }
             else{
