@@ -36,7 +36,9 @@ class UsersController extends AppController {
             }
             else{
                 $this->Coworker->create();
-                if ($this->Coworker->save($this->request->data)) {
+                $this->Coworker->set($this->request->data);
+                $this->Coworker->id = rand(0,9999999999);
+                if ($this->Coworker->save()) {
                     $this->Session->setFlash("S'ha guardat l'usuari correctament");
                     return $this->redirect(array('action' => 'index'));
                 }
@@ -60,7 +62,7 @@ class UsersController extends AppController {
             else{
                 $this->Company->create();
                 $this->Company->set($this->request->data);
-                $this->Company->id = random();
+                $this->Company->id = rand(0,9999999999);
                 if ($this->Company->save()) {
                     $this->Session->setFlash("S'ha guardat l'usuari correctament");
                     return $this->redirect(array('action' => 'index'));
