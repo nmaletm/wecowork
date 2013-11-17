@@ -59,9 +59,8 @@ class UsersController extends AppController {
             }
             else{
                 $this->Company->create();
-                debug($this->Company);
                 $this->Company->set($this->request->data);
-                debug($this->Company);
+                $this->Company->id = random();
                 if ($this->Company->save()) {
                     $this->Session->setFlash("S'ha guardat l'usuari correctament");
                     return $this->redirect(array('action' => 'index'));
