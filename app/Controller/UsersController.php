@@ -24,7 +24,7 @@ class UsersController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
-            $this->User->id = ($this->request->data['Coworker']['username'])?
+            $this->User->username = ($this->request->data['Coworker']['username'])?
                                     $this->request->data['Coworker']['username']:
                                     $this->request->data['Company']['username'];
             if (!$this->User->exists()) {
