@@ -1,5 +1,5 @@
 <?php
-App::import('Lib', 'User');
+App::uses('User', 'Model');
 class Coworker extends User{
 
 }
