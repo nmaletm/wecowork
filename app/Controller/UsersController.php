@@ -10,8 +10,7 @@ class UsersController extends AppController {
     }
 
     public function index() {
-        $this->Users->recursive = 0;
-        $this->set('users', $this->paginate());
+        
     }
 
     public function view($username = null) {
@@ -76,8 +75,8 @@ class UsersController extends AppController {
         }
     }
 
-    public function edit($id = null) {
-        $this->User->id = $id;
+    public function edit($username = null) {
+        $this->User->username = $username;
         if (!$this->User->exists()) {
             throw new NotFoundException("Usuari invàlid");
         }
@@ -93,10 +92,10 @@ class UsersController extends AppController {
         }
     }
 
-    public function delete($id = null) {
+    public function delete($username = null) {
         $this->request->onlyAllow('post');
 
-        $this->User->id = $id;
+        $this->User->username = $username;
         if (!$this->User->exists()) {
             throw new NotFoundException("Usuari invàlid");
         }

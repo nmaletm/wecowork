@@ -4,3 +4,5 @@
 <ul>
 	<li><a href="/users/logout">Logout</a></li>
 </ul>
+
+<?= $this->Session->read('Auth.User.username'); ?>
