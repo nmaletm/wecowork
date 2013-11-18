@@ -4,23 +4,6 @@ class User extends AppModel{
 	public $name = 'User';
 	public $primaryKey = 'id';
 
-	public $_schema = array(
-		'id' => array('type' => 'integer'),
-		'username' => array(
-			'type' => 'string',
-			'length' => 50
-		),
-		'password' => array(
-			'type' => 'string',
-			'length' => 50
-		),
-		'email' => array(
-			'type' => 'string',
-			'length' => 30
-		),
-		'birthdate' => array('type' => 'datetime'),
-		'message' => array('type' => 'text'),
-	);
 
 	public $validate = array(
 		'username' => array(

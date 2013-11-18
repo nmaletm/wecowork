@@ -10,16 +10,16 @@ class UsersController extends AppController {
     }
 
     public function index() {
-        $this->User->recursive = 0;
+        $this->Users->recursive = 0;
         $this->set('users', $this->paginate());
     }
 
-    public function view($id = null) {
-        $this->User->id = $id;
+    public function view($username = null) {
+        $this->User->username = $username;
         if (!$this->User->exists()) {
             throw new NotFoundException('Usuari invalid');
         }
-        $this->set('user', $this->User->read(null, $id));
+        $this->set('user', $this->User->read(null, $username));
     }
 
     public function add() {
