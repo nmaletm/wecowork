@@ -1,27 +1,34 @@
 <?php
-    $projectName = Configure::read('ProjectName');
+    $projectName = "WeCowork";
 ?>
 <!DOCTYPE html>
 <html>
 <head>
         <?php echo $this->Html->charset(); ?>
         <title>
-                <?php echo $title_for_layout, ' | ', Configure::read('ProjectName'); ?>
+                <?php echo $title_for_layout, ' | ', $projectName; ?>
         </title>
+        <!-- Le styles -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <style>
+        body {
+                padding-top: 70px; /* 70px to make the container go all the way to the bottom of the topbar */
+        }
+        .affix {
+                position: fixed;
+                top: 60px;
+                width: 220px;
+        }
+        </style>
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
         <?php
-                //echo $this->Html->meta('icon');
-
-                echo $this->Html->css('bootstrap.min');
-                
-                echo $this->Html->css('bootstrap-responsive.min');
-                
-                echo $this->Html->css('custom');
-                
-                echo $this->Html->script('bootstrap.min');
-
-                echo $this->fetch('meta');
-                echo $this->fetch('css');
-                echo $this->fetch('script');
+	        echo $this->fetch('meta');
+	        echo $this->fetch('css');
         ?>
 </head>
 <body>
@@ -60,5 +67,10 @@
                         <?php echo Configure::read('CreditHTML'); ?>
                 </p>
         </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <?php echo $this->fetch('script'); ?>
 </body>
 </html>
