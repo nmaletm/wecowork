@@ -61,13 +61,20 @@
 								<ul class="nav navbar-nav navbar-right">
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-											<?=$authUser?>
+											<?=$authUser['name']?>
 											<b class="caret"></b>
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="/users/view/<?=$authUser?>">Perfil</a></li>
+											<li><?php echo $this->Html->link('Perfil', array(
+                                        			'controller' => 'users',
+                                               		'action' => 'view',
+                                               		$authUser['username']
+                                        		)); ?></li>
 											<li class="divider"></li>
-											<li><a href="/users/logout">Logout</a></li>
+											<li><?php echo $this->Html->link('Logout', array(
+                                        			'controller' => 'users',
+                                               		'action' => 'logout'
+                                        		)); ?></li>
 										</ul>
 									</li>
 								</ul>
