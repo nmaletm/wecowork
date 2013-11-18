@@ -32,41 +32,42 @@
         ?>
 </head>
 <body>
-        <div id="wrap">
-                <div id="header" class="navbar navbar-fixed-top navbar-inverse">
-                        <div class="navbar-inner">
-                                <div class="container">
-                                        <a class="brand" href="/"><?php echo $projectName; ?></a>
-                                        <ul class="nav">
-                                                <li>
-                                                        <a href="/people">People</a>
-                                                </li>
-                                                <li class="">
-                                                        <a href="/films">Films</a>
-                                                </li>
-                                                <li class="divider-vertical"></li>
-                                                <li>
-                                                        <a href="/me">Me</a>
-                                                </li>
-                                        </ul>
-                                        <form class="navbar-search pull-right">
-                                                <input type="text" class="search-query" placeholder="Search">
-                                        </form>
-                                </div>
+ 
+<body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                        <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                </button>
+                                <?php echo $this->Html->link('BoostCake', array(
+                                        'plugin' => 'boost_cake',
+                                        'controller' => 'boost_cake',
+                                        'action' => 'index'
+                                ), array('class' => 'navbar-brand')); ?>
+                        </div>
+
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                <ul class="nav navbar-nav">
+                                        <li><?php echo $this->Html->link('Bootstrap3', array(
+                                                'action' => 'bootstrap3'
+                                        )); ?></li>
+                                        <li><?php echo $this->Html->link('Bootstrap2', array(
+                                                'action' => 'bootstrap2'
+                                        )); ?></li>
+                                </ul>
                         </div>
                 </div>
-                <div id="content" class="container">
-                        <?php echo $this->Session->flash(); ?>
+        </nav>
 
-                        <?php echo $this->fetch('content'); ?>
-                </div>
-                <div id="push"></div>
-        </div>
-        <div id="footer" class="container">
-                <p class="muted credit">
-                        <?php echo Configure::read('CreditHTML'); ?>
-                </p>
-        </div>
+        <div class="container">
+
+                <?php echo $this->fetch('content'); ?>
+
+        </div><!-- /container -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
