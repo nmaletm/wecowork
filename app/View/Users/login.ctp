@@ -13,12 +13,10 @@
 	'class' => 'well form-horizontal'
 )); ?>
 	<?php echo $this->Form->input('username', array(
-		'placeholder' => "Nom d'usuari",
-		'label' => "Nom d'usuari"
+		'placeholder' => "Nom d'usuari"
 	)); ?>
 	<?php echo $this->Form->input('password', array(
-		'placeholder' => 'Contrasenya',
-		'label' => 'Contrasenya'
+		'placeholder' => 'Contrasenya'
 	)); ?>
 	<div class="form-group">
 		<?php echo $this->Form->submit('Iniciar sessió', array(
