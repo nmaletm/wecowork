@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    
+
     public $components = array(
     	'DebugKit.Toolbar',
         'Session',
@@ -44,7 +44,7 @@ class AppController extends Controller {
                 'key' => 'auth',
                 'params' => array(
                     'plugin' => 'BoostCake',
-                    'class' => 'alert-error'
+                    'class' => 'alert-danger'
                 )
             )
         )
@@ -59,5 +59,6 @@ class AppController extends Controller {
 
     public function beforeFilter() {
         $this->Auth->allow('index', 'view');
+        $this->set('authUser', $this->Auth->user());
     }
 }

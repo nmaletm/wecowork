@@ -1,5 +1,6 @@
 <!-- app/View/Users/login.ctp -->
 <?php echo $this->Session->flash('auth'); ?>
+
 <?php echo $this->Form->create('User', array(
 	'inputDefaults' => array(
 		'div' => 'form-group',

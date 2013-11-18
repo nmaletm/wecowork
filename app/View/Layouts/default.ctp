@@ -41,22 +41,40 @@
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                 </button>
-                                <?php echo $this->Html->link('BoostCake', array(
-                                        'plugin' => 'boost_cake',
-                                        'controller' => 'boost_cake',
+                                <?php echo $this->Html->link('WeCowork', array(
+                                        'controller' => 'home',
                                         'action' => 'index'
                                 ), array('class' => 'navbar-brand')); ?>
                         </div>
 
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                                 <ul class="nav navbar-nav">
-                                        <li><?php echo $this->Html->link('Bootstrap3', array(
-                                                'action' => 'bootstrap3'
+                                        <li><?php echo $this->Html->link('Cercar', array(
+                                        		'controller' => 'search',
+                                               	'action' => 'place'
                                         )); ?></li>
                                         <li><?php echo $this->Html->link('Bootstrap2', array(
                                                 'action' => 'bootstrap2'
                                         )); ?></li>
                                 </ul>
+<? if($authUser) { ?>
+								<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<?=authUser?>
+											<b class="caret"></b>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="/users/view/<?=authUser?>">Perfil</a></li>
+											<li><a href="https://rocalcom.upc.edu/control_panel">Setup Server</a></li>
+											<li><a href="https://rocalcom.upc.edu/maintenance">Maintenance</a></li>
+											<li><a href="https://rocalcom.upc.edu/explorer">DB Explorer</a></li>
+											<li class="divider"></li>
+											<li><a href="/users/logout">Logout</a></li>
+										</ul>
+									</li>
+								</ul>
+<? } ?>
                         </div>
                 </div>
         </nav>
