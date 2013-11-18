@@ -30,9 +30,7 @@
 	        echo $this->fetch('meta');
 	        echo $this->fetch('css');
         ?>
-</head>
-<body>
- 
+</head> 
 <body>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">

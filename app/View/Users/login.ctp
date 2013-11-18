@@ -1,12 +1,26 @@
 <!-- app/View/Users/login.ctp -->
-<div class="users form">
 <?php echo $this->Session->flash('auth'); ?>
-<?php echo $this->Form->create('User'); ?>
-    <fieldset>
-        <legend><?php echo "Si us plau, introdueix una contrasenya i un nom d'usuari"; ?></legend>
-        <?php echo $this->Form->input('username');
-        echo $this->Form->input('password');
-    ?>
-    </fieldset>
-<?php echo $this->Form->end('Iniciar sessió'); ?>
-</div>
+<?php echo $this->Form->create('User', array(
+	'inputDefaults' => array(
+		'div' => 'form-group',
+		'label' => array(
+			'class' => 'col col-md-3 control-label'
+		),
+		'wrapInput' => 'col col-md-9',
+		'class' => 'form-control'
+	),
+	'class' => 'well form-horizontal'
+)); ?>
+	<?php echo $this->Form->input('username', array(
+		'placeholder' => "Nom d'usuari"
+	)); ?>
+	<?php echo $this->Form->input('password', array(
+		'placeholder' => 'Contrasenya'
+	)); ?>
+	<div class="form-group">
+		<?php echo $this->Form->submit('Iniciar sessió', array(
+			'div' => 'col col-md-9 col-md-offset-3',
+			'class' => 'btn btn-default'
+		)); ?>
+	</div>
+<?php echo $this->Form->end(); ?>
