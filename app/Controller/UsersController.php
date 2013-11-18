@@ -28,9 +28,11 @@ class UsersController extends AppController {
 
     public function addCoworker() {
         if ($this->request->is('post')) {
+
             $user = $this->User->find('first', array(
                 'conditions' => array('User.username' => $this->request->data['Coworker']['username'])
             ));
+            
             if($user) {
                 $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
             }
