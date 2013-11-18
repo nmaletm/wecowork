@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    public $uses = array('BoostCake.BoostCake');
+    
     public $components = array(
     	'DebugKit.Toolbar',
         'Session',
@@ -51,6 +51,7 @@ class AppController extends Controller {
     );
 
     public $helpers = array(
+        'Session',
         'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
         'Form' => array('className' => 'BoostCake.BoostCakeForm'),
         'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),

@@ -1,4 +1,4 @@
-<?php $this->layout = 'bootstrap3'; ?>
+
 <h1>Portada de l'usuari!</h1>
 
 <ul>
