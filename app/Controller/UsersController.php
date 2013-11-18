@@ -6,8 +6,7 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add','addCoworker','addCompany');
-        $this->Auth->deny('index');
+        $this->Auth->allow('add','addCoworker','addCompany','login');
     }
 
     public function index() {
@@ -32,7 +31,7 @@ class UsersController extends AppController {
             $user = $this->User->find('first', array(
                 'conditions' => array('User.username' => $this->request->data['Coworker']['username'])
             ));
-            
+
             if($user) {
                 $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
             }
