@@ -61,14 +61,11 @@
 								<ul class="nav navbar-nav navbar-right">
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-											<?=authUser?>
+											<?=$authUser?>
 											<b class="caret"></b>
 										</a>
 										<ul class="dropdown-menu">
-											<li><a href="/users/view/<?=authUser?>">Perfil</a></li>
-											<li><a href="https://rocalcom.upc.edu/control_panel">Setup Server</a></li>
-											<li><a href="https://rocalcom.upc.edu/maintenance">Maintenance</a></li>
-											<li><a href="https://rocalcom.upc.edu/explorer">DB Explorer</a></li>
+											<li><a href="/users/view/<?=$authUser?>">Perfil</a></li>
 											<li class="divider"></li>
 											<li><a href="/users/logout">Logout</a></li>
 										</ul>
