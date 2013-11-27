@@ -1,10 +1,16 @@
 <?php
 class PlacesController extends AppController {
+	public $helpers = array('Html', 'Form');
 	var $name = 'Places';
 	var $uses = array('Place');
 
     public function beforeFilter() {
 
+    }
+	
+	public function view($id = null) {
+        $this->Place->id = $id;
+        $this->set('place', $this->Place->read());
     }
 
     public function index() {
