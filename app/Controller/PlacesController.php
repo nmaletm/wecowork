@@ -5,7 +5,8 @@ class PlacesController extends AppController {
 	var $uses = array('Place');
 
     public function beforeFilter() {
-
+        parent::beforeFilter();
+        $this->Auth->allow('');
     }
 	
 	public function view($id = null) {
