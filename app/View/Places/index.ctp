@@ -7,9 +7,9 @@
 	<!-- loop to print all the places -->
 	<?php foreach ($places as $place): ?>
 		<tr>
-			<td><?php echo $post['Place']['name']; ?></td>
-			<td><?php echo $post['Place']['phone']; ?></td>
-			<td><?php echo $post['Place']['address']; ?></td>
+			<td><?php echo $place['name']; ?></td>
+			<td><?php echo $place['phone']; ?></td>
+			<td><?php echo $place['address']; ?></td>
 		</tr>
 	<?php endforeach; ?>
 </table>
