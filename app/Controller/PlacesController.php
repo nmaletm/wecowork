@@ -5,12 +5,11 @@ class PlacesController extends AppController {
 	var $uses = array('Place');
 
     public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('add','addCoworker','addCompany','login');
+
     }
 
     public function index() {
-        
+        $this->set('places', $this->Place->find('all'));
     }
 
     public function add() {
