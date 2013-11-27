@@ -1,7 +1,7 @@
 <?php
 class Place extends AppModel{
 
-	public $name = 'Space';
+	public $name = 'Place';
 	public $primaryKey = 'id';
 
 
