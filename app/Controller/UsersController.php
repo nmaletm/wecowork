@@ -27,53 +27,13 @@ class UsersController extends AppController {
 
     public function addCoworker() {
         if ($this->request->is('post')) {
-
-            $user = $this->User->find('first', array(
-                'conditions' => array('User.username' => $this->request->data['Coworker']['username'])
-            ));
-
-            if($user) {
-                $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
-            }
-            else{
-                $this->Coworker->create();
-                $this->Coworker->set($this->request->data);
-                $this->Coworker->set(array('id' => rand(0,99999999)));
-                if ($this->Coworker->save()) {
-                    $this->Session->setFlash("S'ha guardat l'usuari correctament");
-                    return $this->redirect(array('action' => 'index'));
-                }
-                else{
-                    debug($this->Coworker->validationErrors);
-                    debug($this->Coworker->invalidFields());
-                }
-                $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");        
-            }
+            $this->ctAddCoworker();
         }
     }
 
     public function addCompany() {
         if ($this->request->is('post')) {
-            $user = $this->User->find('first', array(
-                'conditions' => array('User.username' => $this->request->data['Company']['username'])
-            ));
-            if($user) {
-                $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
-            }
-            else{
-                $this->Company->create();
-                $this->Company->set($this->request->data);
-                $this->Company->set(array('id' => rand(0,99999999)));
-                if ($this->Company->save()) {
-                    $this->Session->setFlash("S'ha guardat l'usuari correctament");
-                    return $this->redirect(array('action' => 'index'));
-                }
-                else{
-                    debug($this->Company->validationErrors);
-                    debug($this->Company->invalidFields);
-                }
-            }
-            $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");        
+            $this->ctAddCompany();
         }
     }
 
@@ -120,5 +80,52 @@ class UsersController extends AppController {
 
     public function logout() {
         return $this->redirect($this->Auth->logout());
+    }
+
+
+    public function ctAddCoworker(){
+        $user = $this->User->find('first', array(
+            'conditions' => array('User.username' => $this->request->data['Coworker']['username'])
+        ));
+
+        if($user) {
+            $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
+        }
+        else{
+            $this->Coworker->create();
+            $this->Coworker->set($this->request->data);
+            $this->Coworker->set(array('id' => rand(0,99999999)));
+            if ($this->Coworker->save()) {
+                $this->Session->setFlash("S'ha guardat l'usuari correctament");
+                return $this->redirect(array('action' => 'index'));
+            }
+            else{
+                debug($this->Coworker->validationErrors);
+                debug($this->Coworker->invalidFields());
+            }
+            $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");        
+        }
+    }
+    public function ctAddCompany(){
+        $user = $this->User->find('first', array(
+            'conditions' => array('User.username' => $this->request->data['Company']['username'])
+        ));
+        if($user) {
+            $this->Session->setFlash("Ja existeix un usuari amb aquest nom d'usuari.");
+        }
+        else{
+            $this->Company->create();
+            $this->Company->set($this->request->data);
+            $this->Company->set(array('id' => rand(0,99999999)));
+            if ($this->Company->save()) {
+                $this->Session->setFlash("S'ha guardat l'usuari correctament");
+                return $this->redirect(array('action' => 'index'));
+            }
+            else{
+                debug($this->Company->validationErrors);
+                debug($this->Company->invalidFields);
+            }
+        }
+        $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");    
     }
 }

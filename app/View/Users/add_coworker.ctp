@@ -3,13 +3,10 @@
 <?php echo $this->Form->create('Coworker', array(
 	'inputDefaults' => array(
 		'div' => 'form-group',
-		'label' => array(
-			'class' => 'col col-md-3 control-label'
-		),
-		'wrapInput' => 'col col-md-9',
+		'wrapInput' => false,
 		'class' => 'form-control'
 	),
-	'class' => 'well form-horizontal'
+	'class' => 'well'
 )); ?>
     <fieldset>
 	    <legend>Registrar Coworker</legend>
@@ -19,6 +16,10 @@
         echo $this->Form->input('email', array('label' => 'Correu', 'placeholder' => "Correu"));
         echo $this->Form->input('name', array('label' => 'Nom', 'placeholder' => "Nom"));
     ?>
+	<?php echo $this->Form->submit('Registrar', array(
+		'div' => 'form-group',
+		'class' => 'btn btn-default'
+	)); ?>
     </fieldset>
-<?php echo $this->Form->end('Registrar'); ?>
+<?php echo $this->Form->end(); ?>
 </div>
