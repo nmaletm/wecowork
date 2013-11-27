@@ -4,6 +4,9 @@ class User extends AppModel{
 	public $name = 'User';
 	public $primaryKey = 'id';
 
+	public $username;
+	public $password;
+	public $email;
 
 	public $validate = array(
 		'username' => array(
