@@ -15,6 +15,8 @@
         echo $this->Form->input('password', array('label' => 'Contrasenya', 'placeholder' => "Contrasenya")); 
         echo $this->Form->input('email', array('label' => 'Correu', 'placeholder' => "Correu"));
         echo $this->Form->input('name', array('label' => 'Nom', 'placeholder' => "Nom"));
+        echo $this->Form->input('address', array('label' => 'Adreça', 'placeholder' => "Adreça"));
+        echo $this->Form->input('nif', array('label' => 'NIF', 'placeholder' => "NIF"));
     ?>
 	<?php echo $this->Form->submit('Registrar', array(
 		'div' => 'form-group',
