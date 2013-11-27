@@ -1,6 +1,6 @@
 <?php
 class PlacesController extends AppController {
-
+	public $helpers = array('Html', 'Form');
 	var $name = 'Places';
 	var $uses = array('Place');
 
