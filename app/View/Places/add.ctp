@@ -1,6 +1,6 @@
-<!-- app/View/Users/addCompany.ctp -->
-<div class="users form">
-<?php echo $this->Form->create('Space'); ?>
+<!-- app/View/Places/add.ctp -->
+<div class="places form">
+<?php echo $this->Form->create('Place'); ?>
     <fieldset>
 	    <legend>Crear Espai</legend>
     <?php
@@ -11,5 +11,5 @@
 		echo $this->Form->input('aditionalInfo', array('label' => 'Informació Adicional'));
     ?>
     </fieldset>
-<?php echo $this->Form->end('Registrar'); ?>
+<?php echo $this->Form->end('Crear'); ?>
 </div>
