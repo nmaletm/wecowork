@@ -79,14 +79,9 @@
 									</li>
 								</ul>
 <? }else{ ?>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li>
-                                        <a href="/users/add" class="btn btn-default navbar-btn">Registre</a>
-                                    </li>
-                                    <li>
-                                        <a href="/users/login" class="btn btn-primary navbar-btn">Iniciar sessió</a>
-                                    </li>
-                                </ul>
+
+                                <a href="/users/add" class="btn btn-default navbar-btn pull-right">Registre</a>
+                                <a href="/users/login" class="btn btn-primary navbar-btn pull-right">Iniciar sessió</a>
 <? } ?>
 
                         </div>
