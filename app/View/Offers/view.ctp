@@ -1,17 +1,11 @@
 <!-- app/View/Places/view.ctp -->
 
 <h1>
-	<?php echo $place['Place']['name']?>
+	<?php echo $offer['Offer']['title']?>
 </h1>
 
 <address>
-  <a href="$place['Place']['website']">
-  	<?php echo $place['Place']['website']?>
-  </a> <br>
-  <?php echo $place['Place']['address']?>  <br>
-  <strong>
-  	<?php echo $place['Place']['phone']?>
-  </strong>
+  <?php echo $offer['Offer']['publicationdate']?>  <br>
 </address>
 
-<?php echo $place['Place']['aditionalinfo']?>
+<?php echo $offer['Offer']['information']?>
