@@ -35,3 +35,22 @@ CREATE TABLE companies(
   nif character varying(50) DEFAULT NULL::character varying,
   address character varying(50) DEFAULT NULL::character varying
 );
+
+CREATE TABLE places(
+  id integer,
+  name character varying(50) NOT NULL,
+  phone character varying(50) DEFAULT NULL::character varying,
+  address character varying(50) DEFAULT NULL::character varying,
+  website character varying(50) DEFAULT NULL::character varying,
+  sexe character varying(50) DEFAULT NULL::character varying,
+  aditionalinfo character varying(500) DEFAULT NULL::character varying,
+  CONSTRAINT places_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE offer(
+  id integer,
+  title character varying(50) NOT NULL,
+  publicationDate date,
+  information character varying(100) DEFAULT NULL::character varying,
+  CONSTRAINT places_pkey PRIMARY KEY (id)
+);
