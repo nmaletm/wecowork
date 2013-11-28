@@ -16,7 +16,7 @@
        echo $this->Form->input('address', array('label' => 'Direcció', 'placeholder' => "Direcció")); 
         echo $this->Form->input('phone', array('type' => 'number', 'label' => 'Teléfon', 'placeholder' => "Teléfon"));
         echo $this->Form->input('website', array('type' => 'url', 'label' => 'URL', 'placeholder' => "URL"));
-		echo $this->Form->input('aditionalInfo', array('label' => 'Informació Adicional', 'placeholder' => "Informació Adicional"));
+		echo $this->Form->input('aditionalinfo', array('label' => 'Informació Adicional', 'placeholder' => "Informació Adicional"));
     ?>
 	<?php echo $this->Form->submit('Crear', array(
 		'div' => 'form-group',
