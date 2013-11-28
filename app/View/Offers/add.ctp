@@ -1,7 +1,7 @@
 <!-- app/View/Places/add.ctp -->
 
 <div class="places form">
-<?php echo $this->Form->create('Place', array(
+<?php echo $this->Form->create('Offer', array(
 	'inputDefaults' => array(
 		'div' => 'form-group',
 		'wrapInput' => false,
