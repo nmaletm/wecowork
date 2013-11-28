@@ -13,12 +13,12 @@
 		<?php foreach ($offers as $offer): ?>
 			<tr>
 				<td>
-					<?php echo $this->Html->link($place['Offer']['title'],
+					<?php echo $this->Html->link($offer['Offer']['title'],
 					array('controller' => 'offers', 'action' => 'view', 
-					$place['Offer']['id'])); ?>
+					$offer['Offer']['id'])); ?>
 				</td>
-				<td><?php echo $place['Offer']['publicationdate']; ?></td>
-				<td><?php echo $place['Offer']['information']; ?></td>
+				<td><?php echo $offer['Offer']['publicationdate']; ?></td>
+				<td><?php echo $offer['Offer']['information']; ?></td>
 			</tr>
 		<?php endforeach; ?>
 	</tbody>
