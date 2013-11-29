@@ -9,8 +9,11 @@ class UsersController extends AppController {
         $this->Auth->allow('add','addCoworker','addCompany','login');
     }
 
-    public function index() {
-        
+    public function index($id = null) {
+        $this->User->id = $id;
+        $this->set('user', $this->User->read());
+        $conditions = array("Place.ownerid" => $id);
+        $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
     }
 
     public function view($username = null) {
@@ -19,9 +22,6 @@ class UsersController extends AppController {
             throw new NotFoundException('Usuari invalid');
         }
         $this->set('user', $this->User->read(null, $username));
-        $conditions = array("Place.ownerid" => $id);
-        $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
-
     }
 
     public function add() {

@@ -24,7 +24,7 @@
  	</thead>
  	<tbody>
 		<!-- loop to print all the offers -->
-		<?php foreach ($place as $place): ?>
+		<?php foreach ($places as $place): ?>
 			<tr>
 				<td>
 					<?php echo $this->Html->link($offer['Place']['name'],
