@@ -27,12 +27,12 @@
 		<?php foreach ($places as $place): ?>
 			<tr>
 				<td>
-					<?php echo $this->Html->link($offer['Place']['name'],
+					<?php echo $this->Html->link($place['Place']['name'],
 					array('controller' => 'places', 'action' => 'view', 
 					$place['Place']['id'])); ?>
 				</td>
-				<td><?php echo $offer['Place']['phone']; ?></td>
-				<td><?php echo $offer['Place']['address']; ?></td>
+				<td><?php echo $place['Place']['phone']; ?></td>
+				<td><?php echo $place['Place']['address']; ?></td>
 			</tr>
 		<?php endforeach; ?>
 	</tbody>
