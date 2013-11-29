@@ -2,7 +2,7 @@
 class PlacesController extends AppController {
 	public $helpers = array('Html', 'Form');
 	var $name = 'Places';
-	var $uses = array('Place');
+	var $uses = array('Place','Offer');
 
     public function beforeFilter() {
         parent::beforeFilter();
