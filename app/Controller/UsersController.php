@@ -2,7 +2,7 @@
 class UsersController extends AppController {
 
 	var $name = 'Users';
-	var $uses = array('User','Coworker','Company');
+	var $uses = array('User','Coworker','Company','Place');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -19,6 +19,9 @@ class UsersController extends AppController {
             throw new NotFoundException('Usuari invalid');
         }
         $this->set('user', $this->User->read(null, $username));
+        $conditions = array("Place.ownerid" => $id);
+        $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
+
     }
 
     public function add() {

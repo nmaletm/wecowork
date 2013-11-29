@@ -22,16 +22,17 @@ class PlacesController extends AppController {
         $this->set('places', $this->Place->find('all'));
     }
 
-    public function add() {
+    public function add($ownerid = null) {
        if ($this->request->is('post')) {
-            $this->ctAddPlace();
+            $this->ctAddPlace($ownerid);
         }
     }
 	
-	public function ctAddPlace(){
+	public function ctAddPlace($ownerid){
 		$this->Place->create();
 		$this->Place->set($this->request->data);
 		$this->Place->set(array('id' => rand(0,99999999)));
+		$this->Place->set(array('ownerid' => $ownerid));
 		if ($this->Place->save()) {
 			$this->Session->setFlash("S'ha guardat l'espai correctament");
 			return $this->redirect(array('action' => 'index'));
