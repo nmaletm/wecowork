@@ -13,7 +13,7 @@ class PlacesController extends AppController {
         $this->Place->id = $id;
         $this->set('place', $this->Place->read());
         //trying to show the offers from a place
-        $this->set('offer', $this->Offer->find('all', array('conditions' => array($id => $this->request->data['Offer']['placeid']))));
+        //$this->set('offer', $this->Offer->find('all', array('conditions' => array($id => $this->request->data['Offer']['placeid']))));
     }
 
     public function index() {
