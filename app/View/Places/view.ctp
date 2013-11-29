@@ -23,3 +23,29 @@
   	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
  </h3>
 
+ <table class="table">
+ 	<thead>
+ 		<tr>
+			<th>Títol</th>
+			<th>Date</th>
+			<th>Informació</th>
+			<th>Espai</th>
+		</tr>
+ 	</thead>
+ 	<tbody>
+		<!-- loop to print all the offers -->
+		<?php foreach ($offers as $offer): ?>
+			<tr>
+				<td>
+					<?php echo $this->Html->link($offer['Offer']['title'],
+					array('controller' => 'offers', 'action' => 'view', 
+					$offer['Offer']['id'])); ?>
+				</td>
+				<td><?php echo $offer['Offer']['publicationdate']; ?></td>
+				<td><?php echo $offer['Offer']['information']; ?></td>
+				<td><?php echo $offer['Offer']['placeid']; ?></td>
+			</tr>
+		<?php endforeach; ?>
+	</tbody>
+ </table>
+
