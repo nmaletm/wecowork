@@ -18,9 +18,9 @@ class OffersController extends AppController {
         $this->set('offers', $this->Offer->find('all'));
     }
 
-    public function add() {
+    public function add($placeid = null) {
        if ($this->request->is('post')) {
-            $this->ctAddOffer();
+            $this->ctAddOffer($placeid);
         }
     }
 	

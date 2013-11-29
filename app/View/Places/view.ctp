@@ -15,3 +15,10 @@
 </address>
 
 <?php echo $place['Place']['aditionalinfo']?>
+
+<h3> Ofertes Actuals 
+	<?php echo $this->Html->link(Afegir Oferta,
+					array('controller' => 'offers', 'action' => 'add', 
+					$place['Place']['id'])); ?>
+  	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
+ </h3>
