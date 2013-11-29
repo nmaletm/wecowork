@@ -16,13 +16,20 @@ class UsersController extends AppController {
         $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
     }
 
-    public function view($username = null) {
+    public function view($id = null) {
+        $this->User->id = $id;
+        $this->set('user', $this->User->read());
+        $conditions = array("Place.ownerid" => $id);
+        $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
+    }
+
+   /* public function view($username = null) {
         $this->User->username = $username;
         if (!$this->User->exists()) {
             throw new NotFoundException('Usuari invalid');
         }
         $this->set('user', $this->User->read(null, $username));
-    }
+    }*/
 
     public function add() {
 
