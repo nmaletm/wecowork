@@ -24,11 +24,12 @@ class OffersController extends AppController {
         }
     }
 	
-	public function ctAddOffer(){
+	public function ctAddOffer($placeid = null){
 		$this->Offer->create();
 		$this->Offer->set($this->request->data);
 		$this->Offer->set(array('id' => rand(0,99999999)));
 		$this->Offer->set(array('publicationdate' => date('Y-m-d H:i:s')));
+		$this->Offer->set(array('placeid' => $placeid));
 		if ($this->Offer->save()) {
 			$this->Session->setFlash("S'ha guardat l'oferta correctament");
 			return $this->redirect(array('action' => 'index'));

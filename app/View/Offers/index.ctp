@@ -6,6 +6,7 @@
 			<th>Títol</th>
 			<th>Date</th>
 			<th>Informació</th>
+			<th>Espai</th>
 		</tr>	
 	</thead>
 	<tbody>
@@ -19,6 +20,7 @@
 				</td>
 				<td><?php echo $offer['Offer']['publicationdate']; ?></td>
 				<td><?php echo $offer['Offer']['information']; ?></td>
+				<td><?php echo $offer['Offer']['placeid']; ?></td>
 			</tr>
 		<?php endforeach; ?>
 	</tbody>
