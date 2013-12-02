@@ -68,7 +68,7 @@
 											<li><?php echo $this->Html->link('Perfil', array(
                                         			'controller' => 'users',
                                                		'action' => 'view',
-                                               		$authUser['username']
+                                               		$authUser['id']
                                         		)); ?></li>
 											<li class="divider"></li>
 											<li><?php echo $this->Html->link('Logout', array(

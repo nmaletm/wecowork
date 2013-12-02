@@ -8,8 +8,13 @@
 
 <h3> Espais Actuals 
 	<?php echo $this->Html->link('Afegir Espai',
-					array('controller' => 'places', 'action' => 'add', 
-					$user['User']['id'])); ?>
+									array(
+											'controller' => 'places', 
+											'action' => 'add', 
+											$user['User']['id']
+										),
+									array('class' => 'btn btn-default pull-right')
+								); ?>
   	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
  </h3>
 
