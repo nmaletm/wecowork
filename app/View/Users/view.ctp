@@ -13,7 +13,7 @@
 											'action' => 'add', 
 											$user['User']['id']
 										),
-									array('class' => 'btn btn-default pull-right')
+									array('class' => 'btn btn-primary pull-right')
 								); ?>
   	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
  </h3>
