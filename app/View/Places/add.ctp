@@ -13,7 +13,7 @@
 	    <legend>Crear Espai de Coworking</legend>
     <?php
         echo $this->Form->input('name', array('label' => "Nom de l'espai", 'placeholder' => "Nom de l'espai"));
-       echo $this->Form->input('address', array('label' => 'Direcció', 'placeholder' => "Direcció")); 
+       	echo $this->Form->input('address', array('label' => 'Direcció', 'placeholder' => "Direcció")); 
         echo $this->Form->input('phone', array('label' => 'Teléfon', 'placeholder' => "Teléfon"));
         echo $this->Form->input('website', array('type' => 'url', 'label' => 'URL', 'placeholder' => "URL"));
 		echo $this->Form->input('aditionalinfo', array('label' => 'Informació Adicional', 'placeholder' => "Informació Adicional"));

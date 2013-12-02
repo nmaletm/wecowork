@@ -28,14 +28,14 @@ class PlacesController extends AppController {
         }
     }
 	
-	public function ctAddPlace($ownerid){
+	public function ctAddPlace($ownerid = null){
 		$this->Place->create();
 		$this->Place->set($this->request->data);
 		$this->Place->set(array('id' => rand(0,99999999)));
 		$this->Place->set(array('ownerid' => $ownerid));
 		if ($this->Place->save()) {
 			$this->Session->setFlash("S'ha guardat l'espai correctament");
-			return $this->redirect(array('action' => 'index'));
+			return $this->redirect(array('controller' => 'Users', 'action' => 'view', $ownerid));
 		}
 		else{
 			debug($this->Place->validationErrors);
