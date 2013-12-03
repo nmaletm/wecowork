@@ -1,17 +1,28 @@
 <!-- app/View/Places/view.ctp -->
-
-<h1>
-	<?php echo $place['Place']['name']?>
-</h1>
-
+<?php echo $this->Html->script('https://maps.googleapis.com/maps/api/js?sensor=false');?>
+<script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+          center: new google.maps.LatLng(44.5403, -78.5463),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 <div class"row">
 	<div class="col-md-8">
+		<h1>
+			<?php echo $place['Place']['name']?>
+		</h1>
 		<address>
 		  <a href="<?php echo $place['Place']['website']?>">
 		  	<?php echo $place['Place']['website']?>
 		  </a> <br>
 		  <strong>
-		  	<span class="glyphicon glyphicon-earphone" style="padding-right:5px;padding-left:5px"> 
+		  	<span class="glyphicon glyphicon-earphone" style="padding-right:5px;"> 
 			</span> 
 			<?php echo $place['Place']['phone']?>
 		  </strong>
@@ -92,6 +103,7 @@
 		<p class="pull-right">
 			<em><?php echo $place['Place']['address']?></em>
 		</p>
+		<br>
 		 <div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 	</div>
 </div>
