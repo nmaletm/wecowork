@@ -4,10 +4,11 @@
 	<div class="col-md-8">
 		<section id="places" class="section_card">
 			<div class="header">
-				<span class="glyphicon glyphicon-home"> 
-				</span>
-				<h3>Espais</h3>
-				<?php echo $this->Html->link('Afegir Espai',
+				<h3> 
+					<span class="glyphicon glyphicon-home"> 
+					</span>
+					Espais
+					<?php echo $this->Html->link('Afegir Espai',
 											array(
 													'controller' => 'places', 
 													'action' => 'add', 
@@ -15,6 +16,8 @@
 												),
 											array('class' => 'btn btn-primary pull-right')
 										); ?>
+				</h3>
+				
 			</div>
 			<div class="body">
 				<table class="table">
@@ -49,7 +52,9 @@
 	<div id="user_info_tab" class="col-md-4">
 		<div class="user_avatar">
 			<!--<img src="http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif" class="img-rounded"/>-->
-			<div style="width:200px; height:200px; background:url('/img/users/<?php echo $user['User']['username']; ?>.png') center center; background-size: cover;" class="img-rounded">
+			<!--<div style="width:200px; height:200px; background:url('/img/users/<?php echo $user['User']['username']; ?>.png') center center; background-size: cover;" class="img-rounded">
+			</div> -->
+			<div style="width:200px; height:200px; background:url('/img/users/nmaletm.png') center center; background-size: cover;" class="img-rounded">
 			</div>
 			
 			<h2 class="fn"> <?php echo $user['User']['name']; ?> </h2>
