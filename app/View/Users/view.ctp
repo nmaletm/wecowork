@@ -3,11 +3,11 @@
 <div class"row">
 	<div class="col-md-8">
 		<section id="places" class="section_card" style="border-style:solid; border-width:1px; border-color:#d9d9d9">
-			<div class="header" style="box-shadow: 0 1px 6px #d9d9d9; padding: 5px">
+			<div class="header" style="background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
-					<span class="glyphicon glyphicon-home"> 
+					<span class="glyphicon glyphicon-home" style="padding-right:10px;padding-left:10px"> 
 					</span>
-					Espais
+					Espais de cowork
 					<?php echo $this->Html->link('Afegir Espai',
 											array(
 													'controller' => 'places', 
@@ -19,7 +19,7 @@
 				</h3>
 				
 			</div>
-			<div class="body">
+			<div class="body" style="padding-top:5px">
 				<table class="table">
 				 	<thead>
 				 		<tr>
