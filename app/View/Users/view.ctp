@@ -1,10 +1,10 @@
-<?= $this->Session->read('Auth.User.username'); ?>
+<!-- <?= $this->Session->read('Auth.User.username'); ?> -->
 
 <div class"row">
 	<div class="col-md-8">
 		<section id="places" class="section_card" style="border-style:solid; border-width:1px; border-color:#d9d9d9">
-			<div class="header" style="box-shadow: 0 1px 6px #d9d9d9">
-				<h3> 
+			<div class="header" style="box-shadow: 0 1px 6px #d9d9d9; padding: 5px">
+				<h3 style="color:#8a8888">
 					<span class="glyphicon glyphicon-home"> 
 					</span>
 					Espais
