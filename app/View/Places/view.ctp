@@ -50,3 +50,37 @@
 	</tbody>
  </table>
 
+ <h3> Opinió dels usuaris
+	<?php echo $this->Html->link('Escriu la teva opinió',
+					array('controller' => 'opinions', 'action' => 'add', 
+					$place['Place']['id']),
+					array('class' => 'btn btn-primary pull-right')); ?>
+  	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
+ </h3>
+
+  <table class="table">
+ 	<thead>
+ 		<tr>
+			<th>Autor</th>
+			<th>Puntuació</th>
+			<th>Opinió</th>
+			<th>Data</th>
+		</tr>
+ 	</thead>
+ 	<tbody>
+		<!-- loop to print all the opinions -->
+		<?php foreach ($opinions as $opinion): ?>
+			<tr>
+				<td>
+					<?php echo $this->Html->link($opinion['Opinion']['coworker'],
+					array('controller' => 'users', 'action' => 'view', 
+					$opinion['opinion']['coworkerid'])); ?>
+				</td>
+				<td><?php echo $opinion['Opinion']['qualification']; ?></td>
+				<td><?php echo $opinion['Opinion']['text']; ?></td>
+				<td><?php echo $opinion['Opinion']['publicationdate']; ?></td>
+			</tr>
+		<?php endforeach; ?>
+	</tbody>
+ </table>
+

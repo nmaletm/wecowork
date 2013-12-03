@@ -2,7 +2,7 @@
 class PlacesController extends AppController {
 	public $helpers = array('Html', 'Form');
 	var $name = 'Places';
-	var $uses = array('Place','Offer');
+	var $uses = array('Place','Offer', 'Opinion');
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -12,8 +12,10 @@ class PlacesController extends AppController {
 	public function view($id = null) {
         $this->Place->id = $id;
         $this->set('place', $this->Place->read());
-        $conditions = array("Offer.placeid" => $id);
-		$this->set('offers', $this->Offer->find('all', array('conditions' => $conditions)));
+        $placeConditions = array("Offer.placeid" => $id);
+		$this->set('offers', $this->Offer->find('all', array('conditions' => $placeConditions)));
+		$opinionConditions = array("Opinion.placeid" => $id);
+		$this->set('opinions', $this->Opinion->find('all', array('conditions' => $opinionconditions)));
         //trying to show the offers from a place
         //$this->set('offer', $this->Offer->find('all', array('conditions' => array($id => $this->request->data['Offer']['placeid']))));
     }

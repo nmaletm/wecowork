@@ -54,3 +54,19 @@ CREATE TABLE offer(
   information character varying(100) DEFAULT NULL::character varying,
   CONSTRAINT places_pkey PRIMARY KEY (id)
 );
+
+CREATE TABLE opinions
+(
+  id integer NOT NULL,
+  placeid integer,
+  coworker character varying(50) NOT NULL,
+  publicationdate date,
+  text character varying(100) NOT NULL,
+  qualification double precision NOT NULL,
+  CONSTRAINT opinions_pkey PRIMARY KEY (id),
+  CONSTRAINT owner_username FOREIGN KEY (coworker)
+      REFERENCES users (username) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT place_id FOREIGN KEY (placeid)
+      REFERENCES places (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
