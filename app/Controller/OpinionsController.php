@@ -26,7 +26,7 @@ class OpinionsController extends AppController {
 		$this->Opinion->set(array('coworkerid' => $user['id']));
 		if ($this->Opinion->save()) {
 			$this->Session->setFlash("S'ha guardat l'opinió correctament");
-			return $this->redirect(array('controller' => 'Users', 'action' => 'view', $ownerid));
+			return $this->redirect(array('controller' => 'Place', 'action' => 'view', $placeid));
 		}
 		else{
 			debug($this->Opinion->validationErrors);

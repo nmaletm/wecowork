@@ -1,4 +1,4 @@
-<!-- app/View/Places/add.ctp -->
+<!-- app/View/Opinions/add.ctp -->
 
 <div class="opinions form">
 <?php echo $this->Form->create('Opinion', array(
@@ -14,7 +14,7 @@
     <?php
 
         echo $this->Form->input('text', array('label' => "La teva opinió", 'placeholder' => "Gràcies a la teva opinió la resta d'usuaris ho tindràn més fàcil al escollir un espai. Moltes Gràcies!"));
-        echo $this->Form->input('qualification', array('options' => array(1, 2, 3, 4, 5),'empty' => '(La teva puntuació)'));
+        echo $this->Form->input('qualification', array('options' => array(1 => 1, 2 => 2, 3 => 3, 4 => 4, 5 => 5),'empty' => '(La teva puntuació)'));
     ?>
 	<?php echo $this->Form->submit('Enviar', array(
 		'div' => 'form-group',
