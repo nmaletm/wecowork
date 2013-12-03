@@ -21,7 +21,7 @@ class OpinionsController extends AppController {
 		$this->Opinion->set(array('id' => rand(0,99999999)));
 		$this->Opinion->set(array('placeid' => $placeid));
 		$this->Opinion->set(array('publicationdate' => date('Y-m-d H:i:s')));
-		$placeid->Place->id = $id;
+		$this->Place->id = $placeid;
         $this->set('place', $place->Place->read());
         $conditions = array("User.id" => 'place.ownerid');
 		$this->set('user', $this->User->find('first', array('conditions' => $conditions)));
