@@ -14,7 +14,7 @@ class Opinion extends AppModel{
 				'rule' => array('notEmpty'),
 				'message' => "Escriu la teva opinió Siusplau"
 			)
-		)
+		),
 		'qualification' => array(
 			'required' => array(
 				'rule' => array('notEmpty'),
