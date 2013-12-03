@@ -47,38 +47,6 @@ class UsersController extends AppController {
         }
     }
 
-    public function edit($username = null) {
-        $this->User->username = $username;
-        if (!$this->User->exists()) {
-            throw new NotFoundException("Usuari invàlid");
-        }
-        if ($this->request->is('post') || $this->request->is('put')) {
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash("L'usuari s'ha guardat correctament");
-                return $this->redirect(array('action' => 'index'));
-            }
-            $this->Session->setFlash("L'usuari no es pot guardar, si us plau, intenta-ho ens uns moments");
-        } else {
-            $this->request->data = $this->User->read(null, $id);
-            unset($this->request->data['User']['password']);
-        }
-    }
-
-    public function delete($username = null) {
-        $this->request->onlyAllow('post');
-
-        $this->User->username = $username;
-        if (!$this->User->exists()) {
-            throw new NotFoundException("Usuari invàlid");
-        }
-        if ($this->User->delete()) {
-            $this->Session->setFlash("S'ha esborrat l'usuari correctament");
-            return $this->redirect(array('action' => 'index'));
-        }
-        $this->Session->setFlash("L'usuari no s'ha esborrat");
-        return $this->redirect(array('action' => 'index'));
-    }
-
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
