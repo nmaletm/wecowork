@@ -2,8 +2,8 @@
 
 <div class"row">
 	<div class="col-md-8">
-		<section id="places" class="section_card" style="box-shadow: 0 1px 6px #d9d9d9; border-style:solid; border-width:1px; border-color:#d9d9d9">
-			<div class="header">
+		<section id="places" class="section_card" style="border-style:solid; border-width:1px; border-color:#d9d9d9">
+			<div class="header" style="box-shadow: 0 1px 6px #d9d9d9">
 				<h3> 
 					<span class="glyphicon glyphicon-home"> 
 					</span>
