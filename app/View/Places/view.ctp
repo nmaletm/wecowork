@@ -86,10 +86,13 @@
 		 </table>
 	</div>
 	<div class="col-md-4">
-		<div class="place_avatar" style="width:200px; height:200px; background:url('http://www.hubsarasota.com/files/coworking-4.jpg') center center; background-size: cover;" class="img-rounded">
+		<div class="place_avatar pull-right" style="width:300px; height:300px; background:url('http://www.hubsarasota.com/files/coworking-4.jpg') center center; background-size: cover;" class="img-rounded">
 		</div>
-		<em><?php echo $place['Place']['address']?></em>
-		 <div id="map_canvas" style="width: 300px; height: 300px; background-color: #CCC"></div>
+		<br>
+		<p class="pull-right">
+			<em><?php echo $place['Place']['address']?></em>
+		</p>
+		 <div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 	</div>
 </div>
 
