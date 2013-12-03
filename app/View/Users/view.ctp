@@ -40,7 +40,9 @@
 	</div>
 	<div id="user_info_tab" class="col-md-4">
 		<div class="user_avatar">
-			<img src="http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif" class="img-rounded">
+			<!--<img src="http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif" class="img-rounded"/>-->
+			<img src="/img/users/<?php echo $user['User']['username']; ?>.png" style="width:200px; height:200px;" class="img-rounded"/>
+			
 			<h2 class="fn"> <?php echo $user['User']['name']; ?> </h2>
 			<p>
 				<em> <?php echo $user['User']['username']; ?> </em>
@@ -52,6 +54,7 @@
 				<b>E-mail</b>
 				<?php echo $user['User']['email']; ?>
 			</span>
+			<br>
 			<span> 
 				<i class="glyphicon-globe"></i>
 				<b>Website</b>
