@@ -74,7 +74,7 @@
 				<td>
 					<?php echo $this->Html->link($opinion['Opinion']['coworker'],
 					array('controller' => 'users', 'action' => 'view', 
-					$opinion['opinion']['coworkerid'])); ?>
+					$opinion['Opinion']['coworkerid'])); ?>
 				</td>
 				<td><?php echo $opinion['Opinion']['qualification']; ?></td>
 				<td><?php echo $opinion['Opinion']['text']; ?></td>
