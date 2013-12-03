@@ -15,7 +15,7 @@ class PlacesController extends AppController {
         $placeConditions = array("Offer.placeid" => $id);
 		$this->set('offers', $this->Offer->find('all', array('conditions' => $placeConditions)));
 		$opinionConditions = array("Opinion.placeid" => $id);
-		$this->set('opinions', $this->Opinion->find('all', array('conditions' => $opinionconditions)));
+		$this->set('opinions', $this->Opinion->find('all', array('conditions' => $opinionConditions)));
         //trying to show the offers from a place
         //$this->set('offer', $this->Offer->find('all', array('conditions' => array($id => $this->request->data['Offer']['placeid']))));
     }
