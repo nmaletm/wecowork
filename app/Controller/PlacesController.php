@@ -32,7 +32,7 @@ class PlacesController extends AppController {
 	
     public function search() {
         if ($this->request->is('post')) {
-            $q = $this->request->data['Place']['username'];
+            $q = $this->request->data['Place']['name'];
             $places = $this->ctSearchPlace($q);
         }
         $this->set('places', $places);
