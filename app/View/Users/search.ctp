@@ -6,8 +6,7 @@
 		'wrapInput' => false,
 		'class' => 'form-control'
 	),
-	'class' => 'well',
-	'action' => 'get'
+	'class' => 'well'
 )); ?>
     <fieldset>
     <?php

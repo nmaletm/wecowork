@@ -29,9 +29,8 @@ class UsersController extends AppController {
         if($username != null){
             $conditions = array('OR' => 
                     array(
-                        "User.username" => $username, 
-                        "User.id" => $username,
-                        "User.nom" => $username,
+                        "User.username  LIKE" => "%".$username."%", 
+                        "User.nom  LIKE" => "%".$username."%",
                     )
                 );
             $users = $this->User->find('all', array('conditions' => $conditions));
