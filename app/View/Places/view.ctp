@@ -101,7 +101,7 @@
 									<td>
 										<div>
 											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
-											</div> <br>
+											</div>
 											<?php echo $this->Html->link($opinion['Opinion']['coworker'],
 													array('controller' => 'users', 'action' => 'view', 
 													$opinion['Opinion']['coworkerid'])); ?>
