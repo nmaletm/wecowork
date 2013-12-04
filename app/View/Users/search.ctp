@@ -36,7 +36,7 @@
 									array('controller' => 'users', 'action' => 'view', 
 									$user['User']['id'])); ?>
 								</td>
-								<td><?php echo $user['Place']['username']; ?></td>
+								<td><?php echo $user['User']['username']; ?></td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>
