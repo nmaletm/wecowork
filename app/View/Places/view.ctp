@@ -100,7 +100,7 @@
 		<div class="place_avatar pull-right" style="width:300px; height:300px; background:url('http://www.hubsarasota.com/files/coworking-4.jpg') center center; background-size: cover;" class="img-rounded">
 		</div>
 		<br>
-		<p class="pull-right">
+		<p class="pull-right" style="margin-top:10px">
 			<em><?php echo $place['Place']['address']?></em>
 		</p>
 		<br>
