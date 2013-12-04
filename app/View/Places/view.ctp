@@ -108,6 +108,7 @@
 						<?php echo $opinion['Opinion']['text']; ?>
 					</div>
 				<?php endforeach; ?>
+				<div class="clearfix"> </div>
 			</div>
 		</section>	
 	</div>
