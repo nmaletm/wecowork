@@ -49,14 +49,12 @@
 
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                                 <ul class="nav navbar-nav">
-                                    <li><?php echo $this->Html->link('Cercar', array(
-                                    		'controller' => 'search',
-                                           	'action' => 'place'
-                                    )); ?></li>
+<? if($authUser) { ?>
                                     <li class="dropdown">
-                                        <?php echo $this->Html->link('Cercar <b class="caret"></b>', array(
-                                            'controller' => 'search',
-                                            'action' => 'place'
+                                        <?php echo $this->Html->link('Cercar', array(
+                                            'controller' => 'places',
+                                            'action' => 'search',
+                                            '<b class="caret"></b>'
                                         )); ?>
                                         <ul class="dropdown-menu">
                                             <li><?php echo $this->Html->link('Cercar espai', array(
@@ -70,6 +68,17 @@
                                                 )); ?></li>
                                         </ul>
                                     </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Missatges
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Veure missatges</a></li>
+                                            <li><a href="#">Enviar nou missatge</a></li>
+                                        </ul>
+                                    </li>
+<? } ?>                                
                                 </ul>
 <? if($authUser) { ?>
 								<ul class="nav navbar-nav navbar-right">
