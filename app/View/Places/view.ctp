@@ -99,10 +99,12 @@
 						<?php foreach ($opinions as $opinion): ?>
 								<tr>
 									<td>
-										<div style="background-color: #333; width:50px; height:50px; background:url('/img/users/<?php echo $opinion['Opinion']['coworker']; ?>.png') center center; background-size: cover;" class="img-rounded">
-												<?php echo $this->Html->link($opinion['Opinion']['coworker'],
-												array('controller' => 'users', 'action' => 'view', 
-												$opinion['Opinion']['coworkerid'])); ?>
+										<div>
+											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
+											</div> <br>
+											<?php echo $this->Html->link($opinion['Opinion']['coworker'],
+													array('controller' => 'users', 'action' => 'view', 
+													$opinion['Opinion']['coworkerid'])); ?>
 										</div>
 									</td>
 									<td>
