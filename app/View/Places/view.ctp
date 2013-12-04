@@ -108,8 +108,10 @@
 										</div>
 									</td>
 									<td style="border-top:none">
-										<?php echo $opinion['Opinion']['qualification']; ?>
-										<?php echo $opinion['Opinion']['text']; ?>
+										<p style="box-shadow: 0 1px 6px #d9d9d9; position:relative;padding:15px;border-color:hsl(201, 100%, 30%);border-style:solid;border-radius:10px;">
+											<?php echo $opinion['Opinion']['qualification']; ?>
+											<?php echo $opinion['Opinion']['text']; ?>
+										</p>
 									</td>
 								</tr>	
 						<?php endforeach; ?>
