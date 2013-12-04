@@ -30,6 +30,28 @@ class PlacesController extends AppController {
         }
     }
 	
+    public function search() {
+        if ($this->request->is('post')) {
+            $q = $this->request->data['Place']['username'];
+            $places = $this->ctSearchPlace($q);
+        }
+        $this->set('places', $places);
+    }
+
+    public function ctSearchUser($q){
+        $conditions = array('OR' => 
+                array(
+                    "Place.name  LIKE" => "%".$q."%", 
+                    "Place.address  LIKE" => "%".$q."%",
+                )
+            );
+        $list = $this->Place->find('all', array('conditions' => $conditions));
+        if(count($list) == 0){
+            $this->Session->setFlash("No s'ha trobat cap espai");
+        }
+        return $list;
+    }
+
 	public function ctAddPlace($ownerid = null){
 		$this->Place->create();
 		$this->Place->set($this->request->data);

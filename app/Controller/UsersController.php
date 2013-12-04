@@ -25,18 +25,9 @@ class UsersController extends AppController {
 
 
     public function search() {
-        $username = $this->request->data['User']['username'];
-        if($username != null){
-            $conditions = array('OR' => 
-                    array(
-                        "User.username  LIKE" => "%".$username."%", 
-                        "User.name  LIKE" => "%".$username."%",
-                    )
-                );
-            $users = $this->User->find('all', array('conditions' => $conditions));
-            if(count($users) == 0){
-                $this->Session->setFlash("No s'ha trobat cap usuari");
-            }
+        if ($this->request->is('post')) {
+            $q = $this->request->data['User']['username'];
+            $users = $this->ctSearchUser($q);
         }
         $this->set('users', $users);
     }
@@ -71,6 +62,19 @@ class UsersController extends AppController {
         return $this->redirect($this->Auth->logout());
     }
 
+    public function ctSearchUser($q){
+        $conditions = array('OR' => 
+                array(
+                    "User.username  LIKE" => "%".$q."%", 
+                    "User.name  LIKE" => "%".$q."%",
+                )
+            );
+        $list = $this->User->find('all', array('conditions' => $conditions));
+        if(count($list) == 0){
+            $this->Session->setFlash("No s'ha trobat cap usuari");
+        }
+        return $list;
+    }
 
     public function ctAddCoworker(){
         $user = $this->User->find('first', array(
