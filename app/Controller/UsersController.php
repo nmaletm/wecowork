@@ -25,9 +25,8 @@ class UsersController extends AppController {
 
 
     public function search() {
-        $username = $this->request->data['User']['username']
+        $username = $this->request->data['User']['username'];
         if($username != null){
-            $this->User->username = $username;
             $conditions = array('OR' => 
                     array(
                         "User.username" => $username, 
@@ -35,7 +34,7 @@ class UsersController extends AppController {
                         "User.nom" => $username,
                     )
                 );
-            $users = $this->User->find('all', array('conditions' => $conditions))
+            $users = $this->User->find('all', array('conditions' => $conditions));
             if(count($users) == 0){
                 $this->Session->setFlash("No s'ha trobat cap usuari");
             }
