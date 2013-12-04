@@ -30,7 +30,7 @@ class UsersController extends AppController {
             $conditions = array('OR' => 
                     array(
                         "User.username  LIKE" => "%".$username."%", 
-                        "User.nom  LIKE" => "%".$username."%",
+                        "User.name  LIKE" => "%".$username."%",
                     )
                 );
             $users = $this->User->find('all', array('conditions' => $conditions));
