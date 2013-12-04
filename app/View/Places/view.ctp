@@ -102,13 +102,15 @@
 						<?php echo $this->Html->link($opinion['Opinion']['coworker'],
 							array('controller' => 'users', 'action' => 'view', 
 							$opinion['Opinion']['coworkerid'])); ?>
+							<div class="clearfix"> </div>
 					</div>
 					<div class="col-md-8">
 						<?php echo $opinion['Opinion']['qualification']; ?>
 						<?php echo $opinion['Opinion']['text']; ?>
+						<div class="clearfix"> </div>
 					</div>
 				<?php endforeach; ?>
-				<div class="clearfix"> </div>
+
 			</div>
 		</section>	
 	</div>
