@@ -9,13 +9,13 @@
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(map_canvas, map_options)
-        codeAddress();
+        codeAddress(map);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
 
      geocoder = new google.maps.Geocoder();
 
-  function codeAddress() {
+  function codeAddress(map) {
     //In this case it gets the address from an element on the page, but obviously you  could just pass it to the method instead
     var address = '<?php echo $place['Place']['address']?>';
 
