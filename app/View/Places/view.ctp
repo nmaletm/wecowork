@@ -27,9 +27,7 @@
             map: map, 
             position: results[0].geometry.location
         });
-      } else {
-        alert("Geocode was not successful for the following reason: " + status);
-      }
+      } 
     });
   }
 
@@ -84,13 +82,52 @@
 			</tbody>
 		 </table>
 
-		 <h3> Opinió dels usuaris
-			<?php echo $this->Html->link('Escriu la teva opinió',
+		 <section id="opinions" class="section_card" >
+			<div class="header" style="background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
+				<h3 style="color:#8a8888">
+					Opinió dels usuaris
+					<?php echo $this->Html->link('Escriu la teva opinió',
 							array('controller' => 'opinions', 'action' => 'add', 
 							$place['Place']['id']),
 							array('class' => 'btn btn-primary pull-right')); ?>
-		  	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
-		 </h3>
+				</h3>
+				
+			</div>
+			<div class="body" style="padding-top:5px">
+				<div class="col-md-4">
+					User photo
+					<br>
+					user.name
+				</div>
+				<div class="col-md-8">
+					<h2>Títol</h2>
+					asdvaskfjbaskdjnasdlghfkgngkjnfkjnhddgfvhbjnguftctvygbuhnj
+				</div>
+				<!--<table class="table">
+				 	<thead>
+				 		<tr>
+							<th>Nom</th>
+							<th>Teléfon</th>
+							<th>Adreça</th>
+						</tr>
+				 	</thead>
+				 	<tbody>
+						<!-- loop to print all the offers -->
+						<!--<?php foreach ($places as $place): ?>
+							<tr>
+								<td>
+									<?php echo $this->Html->link($place['Place']['name'],
+									array('controller' => 'places', 'action' => 'view', 
+									$place['Place']['id'])); ?>
+								</td>
+								<td><?php echo $place['Place']['phone']; ?></td>
+								<td><?php echo $place['Place']['address']; ?></td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				 </table>-->
+			</div>
+		</section>	
 
 		  <table class="table">
 		 	<thead>
