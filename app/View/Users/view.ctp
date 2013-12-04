@@ -53,7 +53,6 @@
 		<div class="user_avatar">
 			<!--<img src="http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif" class="img-rounded"/>-->
 			<div style="width:200px; height:200px; background:url('/img/users/<?php echo $user['User']['username']; ?>.png') center center; background-size: cover;" class="img-rounded">
-			</div> 
 			</div>
 			
 			<h2 class="fn"> <?php echo $user['User']['name']; ?> </h2>

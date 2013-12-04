@@ -1,6 +1,6 @@
 <!-- app/View/Places/view.ctp -->
 <?php echo $this->Html->script('https://maps.googleapis.com/maps/api/js?sensor=false');?>
-<script>
+<script type="text/javascript">
       function initialize() {
         var map_canvas = document.getElementById('map_canvas');
         var map_options = {
@@ -9,9 +9,31 @@
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(map_canvas, map_options)
+        codeAddress();
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+
+     geocoder = new google.maps.Geocoder();
+
+  function codeAddress() {
+    //In this case it gets the address from an element on the page, but obviously you  could just pass it to the method instead
+    var address = '<?php echo $place['Place']['address']?>';
+
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map, 
+            position: results[0].geometry.location
+        });
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+
+</script>
 <div class"row">
 	<div class="col-md-8">
 		<h1>
