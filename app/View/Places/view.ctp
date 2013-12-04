@@ -94,8 +94,9 @@
 				
 			</div>
 			<div class="body" style="padding-top:5px">
-				<div class="row">
+				
 					<?php foreach ($opinions as $opinion): ?>
+					<div class="row clearfix">
 						<div class="col-md-4">
 							<div style="background-color: #333; width:50px; height:50px; background:url('/img/users/<?php echo $opinion['Opinion']['coworker']; ?>.png') center center; background-size: cover;" class="img-rounded">
 							</div>
@@ -108,8 +109,9 @@
 							<?php echo $opinion['Opinion']['qualification']; ?>
 							<?php echo $opinion['Opinion']['text']; ?>
 						</div>
+					</div>
 					<?php endforeach; ?>
-				</div>
+				
 			</div>
 		</section>	
 	</div>
