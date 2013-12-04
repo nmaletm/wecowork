@@ -38,7 +38,7 @@ class PlacesController extends AppController {
         $this->set('places', $places);
     }
 
-    public function ctSearchUser($q){
+    public function ctSearchPlace($q){
         $conditions = array('OR' => 
                 array(
                     "Place.name  LIKE" => "%".$q."%", 
