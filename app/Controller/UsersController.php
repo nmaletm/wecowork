@@ -23,13 +23,15 @@ class UsersController extends AppController {
         $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
     }
 
-   /* public function view($username = null) {
-        $this->User->username = $username;
-        if (!$this->User->exists()) {
-            throw new NotFoundException('Usuari invalid');
+
+    public function search() {
+        if ($this->request->is('post')) {
+            $q = $this->request->data['User']['username'];
+            $users = $this->ctSearchUser($q);
         }
-        $this->set('user', $this->User->read(null, $username));
-    }*/
+        $this->set('users', $users);
+    }
+
 
     public function add() {
 
@@ -60,6 +62,19 @@ class UsersController extends AppController {
         return $this->redirect($this->Auth->logout());
     }
 
+    public function ctSearchUser($q){
+        $conditions = array('OR' => 
+                array(
+                    "User.username  LIKE" => "%".$q."%", 
+                    "User.name  LIKE" => "%".$q."%",
+                )
+            );
+        $list = $this->User->find('all', array('conditions' => $conditions));
+        if(count($list) == 0){
+            $this->Session->setFlash("No s'ha trobat cap usuari");
+        }
+        return $list;
+    }
 
     public function ctAddCoworker(){
         $user = $this->User->find('first', array(

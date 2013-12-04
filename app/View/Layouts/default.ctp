@@ -49,16 +49,48 @@
 
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                                 <ul class="nav navbar-nav">
-                                        <li><?php echo $this->Html->link('Cercar', array(
-                                        		'controller' => 'search',
-                                               	'action' => 'place'
-                                        )); ?></li>
-                                        <li><?php echo $this->Html->link('Bootstrap2', array(
-                                                'action' => 'bootstrap2'
-                                        )); ?></li>
+<? if($authUser) { ?>
+                                    <li class="dropdown">
+                                        <a href="/places/search" class="dropdown-toggle" data-toggle="dropdown">
+                                            Cercar
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><?php echo $this->Html->link('Cercar espai', array(
+                                                    'controller' => 'places',
+                                                    'action' => 'search'
+                                                )); ?></li>
+                                            <li><?php echo $this->Html->link('Cercar usuari', array(
+                                                    'controller' => 'users',
+                                                    'action' => 'search'
+                                                )); ?></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Missatges
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Veure missatges</a></li>
+                                            <li><a href="#">Enviar nou missatge</a></li>
+                                        </ul>
+                                    </li>
+<? } ?>                                
                                 </ul>
 <? if($authUser) { ?>
 								<ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Idioma
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Català</a></li>
+                                            <li><a href="#">Español</a></li>
+                                            <li><a href="#">English</a></li>
+                                        </ul>
+                                    </li>
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											<?=$authUser['name']?>
@@ -71,7 +103,7 @@
                                                		$authUser['id']
                                         		)); ?></li>
 											<li class="divider"></li>
-											<li><?php echo $this->Html->link('Logout', array(
+											<li><?php echo $this->Html->link('Tancar sessió', array(
                                         			'controller' => 'users',
                                                		'action' => 'logout'
                                         		)); ?></li>
