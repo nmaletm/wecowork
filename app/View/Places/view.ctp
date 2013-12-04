@@ -94,69 +94,25 @@
 				
 			</div>
 			<div class="body" style="padding-top:5px">
-				<div class="col-md-4">
-					User photo
-					<br>
-					user.name
-				</div>
-				<div class="col-md-8">
-					<h2>Títol</h2>
-					asdvaskfjbaskdjnasdlghfkgngkjnfkjnhddgfvhbjnguftctvygbuhnj
-				</div>
-				<!--<table class="table">
-				 	<thead>
-				 		<tr>
-							<th>Nom</th>
-							<th>Teléfon</th>
-							<th>Adreça</th>
-						</tr>
-				 	</thead>
-				 	<tbody>
-						<!-- loop to print all the offers -->
-						<!--<?php foreach ($places as $place): ?>
-							<tr>
-								<td>
-									<?php echo $this->Html->link($place['Place']['name'],
-									array('controller' => 'places', 'action' => 'view', 
-									$place['Place']['id'])); ?>
-								</td>
-								<td><?php echo $place['Place']['phone']; ?></td>
-								<td><?php echo $place['Place']['address']; ?></td>
-							</tr>
-						<?php endforeach; ?>
-					</tbody>
-				 </table>-->
-			</div>
-		</section>	
-
-		  <table class="table">
-		 	<thead>
-		 		<tr>
-					<th>Autor</th>
-					<th>Puntuació</th>
-					<th>Opinió</th>
-					<th>Data</th>
-				</tr>
-		 	</thead>
-		 	<tbody>
-				<!-- loop to print all the opinions -->
 				<?php foreach ($opinions as $opinion): ?>
-					<tr>
-						<td>
-							<?php echo $this->Html->link($opinion['Opinion']['coworker'],
+					<div class="col-md-4">
+						<div style="background-color: #333; width:50px; height:50px; background:url('/img/users/<?php echo $opinion['Opinion']['coworker']; ?>.png') center center; background-size: cover;" class="img-rounded">
+						</div>
+						<br>
+						<?php echo $this->Html->link($opinion['Opinion']['coworker'],
 							array('controller' => 'users', 'action' => 'view', 
 							$opinion['Opinion']['coworkerid'])); ?>
-						</td>
-						<td><?php echo $opinion['Opinion']['qualification']; ?></td>
-						<td><?php echo $opinion['Opinion']['text']; ?></td>
-						<td><?php echo $opinion['Opinion']['publicationdate']; ?></td>
-					</tr>
+					</div>
+					<div class="col-md-8">
+						<?php echo $opinion['Opinion']['qualification']; ?>
+						<?php echo $opinion['Opinion']['text']; ?>
+					</div>
 				<?php endforeach; ?>
-			</tbody>
-		 </table>
+			</div>
+		</section>	
 	</div>
 	<div class="col-md-4">
-		<div class="place_avatar pull-right" style="width:300px; height:300px; background:url('http://www.hubsarasota.com/files/coworking-4.jpg') center center; background-size: cover;" class="img-rounded">
+		<div class="place_avatar pull-right" style="width:300px; height:300px; background:url('http://www.hubsarasota.com/files/coworking-4.jpg') center center; background-size: cover;" class="img-circle">
 		</div>
 		<br>
 		<p class="pull-right" style="margin-top:10px">
