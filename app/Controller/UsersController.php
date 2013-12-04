@@ -37,8 +37,8 @@ class UsersController extends AppController {
             if(count($users) == 0){
                 $this->Session->setFlash("No s'ha trobat cap usuari");
             }
-            $this->set('users', $users);
         }
+        $this->set('users', $users);
     }
 
 

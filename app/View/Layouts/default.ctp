@@ -58,8 +58,7 @@
                                         <ul class="dropdown-menu">
                                             <li><?php echo $this->Html->link('Cercar espai', array(
                                                     'controller' => 'places',
-                                                    'action' => 'search',
-                                                    $authUser['id']
+                                                    'action' => 'search'
                                                 )); ?></li>
                                             <li><?php echo $this->Html->link('Cercar usuari', array(
                                                     'controller' => 'users',
