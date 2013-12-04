@@ -95,22 +95,21 @@
 			</div>
 			<div class="body" style="padding-top:5px">
 				<?php foreach ($opinions as $opinion): ?>
-					<div class="col-md-4">
-						<div style="background-color: #333; width:50px; height:50px; background:url('/img/users/<?php echo $opinion['Opinion']['coworker']; ?>.png') center center; background-size: cover;" class="img-rounded">
+					<div class"row">
+						<div class="col-md-4">
+							<div style="background-color: #333; width:50px; height:50px; background:url('/img/users/<?php echo $opinion['Opinion']['coworker']; ?>.png') center center; background-size: cover;" class="img-rounded">
+							</div>
+							<br>
+							<?php echo $this->Html->link($opinion['Opinion']['coworker'],
+								array('controller' => 'users', 'action' => 'view', 
+								$opinion['Opinion']['coworkerid'])); ?>
 						</div>
-						<br>
-						<?php echo $this->Html->link($opinion['Opinion']['coworker'],
-							array('controller' => 'users', 'action' => 'view', 
-							$opinion['Opinion']['coworkerid'])); ?>
-							<div class="clearfix"> </div>
-					</div>
-					<div class="col-md-8">
-						<?php echo $opinion['Opinion']['qualification']; ?>
-						<?php echo $opinion['Opinion']['text']; ?>
-						<div class="clearfix"> </div>
+						<div class="col-md-8">
+							<?php echo $opinion['Opinion']['qualification']; ?>
+							<?php echo $opinion['Opinion']['text']; ?>
+						</div>
 					</div>
 				<?php endforeach; ?>
-
 			</div>
 		</section>	
 	</div>
