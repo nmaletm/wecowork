@@ -98,7 +98,7 @@
 				 	<tbody>
 						<?php foreach ($opinions as $opinion): ?>
 								<tr>
-									<td class="col-md-1" style="top-border:none">
+									<td class="col-md-1" style="border-top:none">
 										<div>
 											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
 											</div>
@@ -107,7 +107,7 @@
 													$opinion['Opinion']['coworkerid'])); ?>
 										</div>
 									</td>
-									<td style="top-border:none">
+									<td style="border-top:none">
 										<?php echo $opinion['Opinion']['qualification']; ?>
 										<?php echo $opinion['Opinion']['text']; ?>
 									</td>
