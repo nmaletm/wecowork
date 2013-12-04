@@ -51,11 +51,10 @@
                                 <ul class="nav navbar-nav">
 <? if($authUser) { ?>
                                     <li class="dropdown">
-                                        <?php echo $this->Html->link('Cercar', array(
-                                            'controller' => 'places',
-                                            'action' => 'search',
-                                            '<b class="caret"></b>'
-                                        )); ?>
+                                        <a href="/places/search" class="dropdown-toggle" data-toggle="dropdown">
+                                            Cercar
+                                            <b class="caret"></b>
+                                        </a>
                                         <ul class="dropdown-menu">
                                             <li><?php echo $this->Html->link('Cercar espai', array(
                                                     'controller' => 'places',
