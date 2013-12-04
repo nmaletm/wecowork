@@ -23,13 +23,26 @@ class UsersController extends AppController {
         $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
     }
 
-   /* public function view($username = null) {
-        $this->User->username = $username;
-        if (!$this->User->exists()) {
-            throw new NotFoundException('Usuari invalid');
+
+    public function search() {
+        $username = $this->request->data['User']['username']
+        if($username != null){
+            $this->User->username = $username;
+            $conditions = array('OR' => 
+                    array(
+                        "User.username" => $username, 
+                        "User.id" => $username,
+                        "User.nom" => $username,
+                    )
+                );
+            $users = $this->User->find('all', array('conditions' => $conditions))
+            if(count($users) == 0){
+                $this->Session->setFlash("No s'ha trobat cap usuari");
+            }
+            $this->set('users', $users);
         }
-        $this->set('user', $this->User->read(null, $username));
-    }*/
+    }
+
 
     public function add() {
 
