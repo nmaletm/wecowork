@@ -98,7 +98,7 @@
 				 	<tbody>
 						<?php foreach ($opinions as $opinion): ?>
 								<tr>
-									<td>
+									<td class="col-md-1">
 										<div>
 											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
 											</div>
@@ -109,7 +109,7 @@
 									</td>
 									<td>
 										<?php echo $opinion['Opinion']['qualification']; ?>
-								<?php echo $opinion['Opinion']['text']; ?>
+										<?php echo $opinion['Opinion']['text']; ?>
 									</td>
 								</tr>	
 						<?php endforeach; ?>
