@@ -32,6 +32,7 @@
   }
 
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
 <div class"row">
 	<div class="col-md-8">
 		<h1>
@@ -97,8 +98,9 @@
 										<div>
 											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
 											</div>
+											<br>
 											<div class="progress">
-												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>" style="width: <?php echo $opinion['Opinion']['qualification']; ?>*20 %">
+												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>" style="{{width: + <?php echo $opinion['Opinion']['qualification'];?>*20 + %}}">
 													<span class="sr-only"> <?php echo $opinion['Opinion']['qualification']; ?> Complete</span>
 												</div>
 											</div>
