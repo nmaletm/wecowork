@@ -51,7 +51,7 @@
 		<br>
 <div class="section_offers">
 		<section id="offers" class="section_card" >
-			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
+			<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px; background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
 					Ofertes Actuals 
 					<?php echo $this->Html->link('Afegir Oferta',
@@ -67,9 +67,7 @@
 						<div class="col-md-1" style="margin:8px">
 							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('http://2.bp.blogspot.com/-bgTYIiX4nKI/TiYToQPKH2I/AAAAAAAAlro/mv1Uyz1oMRQ/s1600/sala-blanca.jpg') center center; background-size: cover;" class="img-circle">
 							</div>
-							<?php echo $this->Html->link($offer['Offer']['title'],
-							array('controller' => 'offers', 'action' => 'view', 
-							$offer['Offer']['id'])); ?>
+							<?php echo $offer['Offer']['title']; ?>
 						</div>
 					<?php endforeach; ?>
 				</div>
@@ -78,7 +76,7 @@
 	</div>
 	<br>
 		 <section id="opinions" class="section_card" >
-			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
+			<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
 					Opinió dels usuaris
 					<?php echo $this->Html->link('Escriu la teva opinió',
