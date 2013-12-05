@@ -48,6 +48,7 @@
 		  </strong>
 		</address>
 		<?php echo $place['Place']['aditionalinfo']?>
+		<br>
 <div class="section_offers">
 		<section id="offers" class="section_card" >
 			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
@@ -96,14 +97,20 @@
 										<div>
 											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
 											</div>
-											<?php echo $this->Html->link($opinion['Opinion']['coworker'],
-													array('controller' => 'users', 'action' => 'view', 
-													$opinion['Opinion']['coworkerid'])); ?>
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>">
+												</div>
+											</div>
+											<?php echo $opinion['Opinion']['qualification']; ?>
+											
 										</div>
 									</td>
 									<td style="border-top:none">
 										<p style="box-shadow: 0 1px 6px #3276b1; position:relative; padding:15px; border-color:#3276b1; border-style:solid; border-radius:10px; border-width:0px">
-											<?php echo $opinion['Opinion']['qualification']; ?>
+											<h4> <?php echo $this->Html->link($opinion['Opinion']['coworker'],
+													array('controller' => 'users', 'action' => 'view', 
+													$opinion['Opinion']['coworkerid'])); ?>
+											</h4>
 											<?php echo $opinion['Opinion']['text']; ?>
 										</p>
 									</td>
