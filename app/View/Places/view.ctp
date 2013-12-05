@@ -61,9 +61,9 @@
 				
 			</div>
 			<div class="body" style="padding-top:5px">
-				<div class="row-fluid">
+				<div class="row">
 					 <?php foreach ($offers as $offer): ?>
-						<div class="col-md-1">
+						<div class="col-md-1" style="padding:2px">
 							<div style="background-color: #333; width:50px; height:50px; background:url('https://cdn1.iconfinder.com/data/icons/customicondesignoffice2/256/FAQ.png') center center; background-size: cover;" class="img-circle">
 							<br>
 								<?php echo $this->Html->link($offer['Offer']['title'],
@@ -76,6 +76,7 @@
 			</div>
 		</section>
 	</div>
+	<br>
 		 <section id="opinions" class="section_card" >
 			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
