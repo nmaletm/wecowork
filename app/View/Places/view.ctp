@@ -92,14 +92,14 @@
 				 	<tbody>
 						<?php foreach ($opinions as $opinion): ?>
 								<tr>
-									<td class="col-md-1" style="border-top:none">
+									<td id="offers" class="col-md-1" style="border-top:none">
 										<div>
 											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
 											</div>
 											<br>
 											<div class="progress">
 												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>" style="width: <?php echo $opinion['Opinion']['qualification']*20;?>%">
-													<span> <?php echo $opinion['Opinion']['qualification']; ?>/span>
+													<span> <?php echo $opinion['Opinion']['qualification']; ?></span>
 												</div>
 											</div>	
 										</div>
@@ -130,5 +130,7 @@
 		 <div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 	</div>
 </div>
+
+$('#offers').tooltip('show')
 
 
