@@ -65,7 +65,7 @@
 			<div class="body" style="padding-top:5px">
 				<div class="row">
 					 <?php foreach ($offers as $offer): ?>
-						<div class="col-md-1" style="margin:8px" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<?php echo $offer['Offer']['description']; ?> aaaaa">
+						<div class="col-md-1" style="margin:8px" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<?php echo $offer['Offer']['information']; ?> aaaaa">
 							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('http://2.bp.blogspot.com/-bgTYIiX4nKI/TiYToQPKH2I/AAAAAAAAlro/mv1Uyz1oMRQ/s1600/sala-blanca.jpg') center center; background-size: cover;" class="img-circle">
 							</div>
 							<?php echo $offer['Offer']['title']; ?>
