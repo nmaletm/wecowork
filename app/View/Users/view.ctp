@@ -3,7 +3,7 @@
 <div class"row">
 	<div class="col-md-8">
 		<section id="places" class="section_card" style="border-style:solid; border-width:1px; border-color:#d9d9d9">
-			<div class="header" style="background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
+			<div class="header" style="border-width: 1px; border-radius:5px; background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
 					<span class="glyphicon glyphicon-home" style="padding-right:10px;padding-left:10px"> 
 					</span>

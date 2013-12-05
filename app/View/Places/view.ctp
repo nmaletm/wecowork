@@ -83,7 +83,7 @@
 		 </table>
 
 		 <section id="opinions" class="section_card" >
-			<div class="header" style="background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
+			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
 					Opinió dels usuaris
 					<?php echo $this->Html->link('Escriu la teva opinió',
@@ -108,7 +108,7 @@
 										</div>
 									</td>
 									<td style="border-top:none">
-										<p style="box-shadow: 0 1px 6px #3276b1; position:relative; padding:15px; border-color:#3276b1; border-style:solid; border-radius:10px; border-width:0px">>
+										<p style="box-shadow: 0 1px 6px #3276b1; position:relative; padding:15px; border-color:#3276b1; border-style:solid; border-radius:10px; border-width:0px">
 											<?php echo $opinion['Opinion']['qualification']; ?>
 											<?php echo $opinion['Opinion']['text']; ?>
 										</p>
