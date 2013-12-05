@@ -106,7 +106,7 @@
 										</div>
 									</td>
 									<td style="border-top:none">
-										<div style="box-shadow: 0 1px 6px #3276b1; position:relative; padding:15px; border-color:#3276b1; border-style:solid; border-radius:10px; border-width:0px">
+										<div style="box-shadow: 0 1px 6px #3276b1; position:relative; padding:5px 15px 15px 15px; border-color:#3276b1; border-style:solid; border-radius:10px; border-width:0px">
 											<h4> <?php echo $this->Html->link($opinion['Opinion']['coworker'],
 													array('controller' => 'users', 'action' => 'view', 
 													$opinion['Opinion']['coworkerid'])); ?> </h4>
