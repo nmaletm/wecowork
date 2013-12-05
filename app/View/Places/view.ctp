@@ -94,7 +94,7 @@
 								<tr>
 									<td id="offers" class="col-md-1" style="border-top:none">
 										<div>
-											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
+											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.knaria.com/wp-content/uploads/2013/11/penguin-cartoon.png') center center; background-size: cover;" class="img-rounded">
 											</div>
 											<br>
 											<div class="progress">
