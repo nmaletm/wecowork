@@ -94,7 +94,7 @@
 								<tr>
 									<td id="offers" class="col-md-1" style="border-top:none">
 										<div>
-											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.knaria.com/wp-content/uploads/2013/11/penguin-cartoon.png') center center; background-size: cover;" class="img-rounded">
+											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.hdwallpapersdj.com/wp-content/uploads/2013/09/15094629-buddhist-monk-cartoon-vector.jpg') center center; background-size: cover;" class="img-rounded">
 											</div>
 											<br>
 											<div class="progress">
