@@ -32,7 +32,6 @@
   }
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
 <div class"row">
 	<div class="col-md-8">
 		<h1>
@@ -100,7 +99,7 @@
 											</div>
 											<br>
 											<div class="progress">
-												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>" style="{{width: + <?php echo $opinion['Opinion']['qualification'];?>*20 + %}}">
+												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>" style="width: <?php echo $opinion['Opinion']['qualification']*20;?>*%">
 													<span class="sr-only"> <?php echo $opinion['Opinion']['qualification']; ?> Complete</span>
 												</div>
 											</div>
@@ -110,9 +109,9 @@
 									</td>
 									<td style="border-top:none">
 										<p style="box-shadow: 0 1px 6px #3276b1; position:relative; padding:15px; border-color:#3276b1; border-style:solid; border-radius:10px; border-width:0px">
-											<?php echo $this->Html->link($opinion['Opinion']['coworker'],
+											<h2><?php echo $this->Html->link($opinion['Opinion']['coworker'],
 													array('controller' => 'users', 'action' => 'view', 
-													$opinion['Opinion']['coworkerid'])); ?>
+													$opinion['Opinion']['coworkerid'])); ?> </h2>
 											<?php echo $opinion['Opinion']['text']; ?>
 										</p>
 									</td>
@@ -134,4 +133,5 @@
 		 <div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 	</div>
 </div>
+
 
