@@ -66,11 +66,9 @@
 						<div class="col-md-1">
 							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('https://cdn1.iconfinder.com/data/icons/customicondesignoffice2/256/FAQ.png') center center; background-size: cover;" class="img-circle">
 							</div>
-							<br>
-								<?php echo $this->Html->link($offer['Offer']['title'],
-								array('controller' => 'offers', 'action' => 'view', 
-								$offer['Offer']['id'])); ?>
-							
+							<?php echo $this->Html->link($offer['Offer']['title'],
+							array('controller' => 'offers', 'action' => 'view', 
+							$offer['Offer']['id'])); ?>
 						</div>
 					<?php endforeach; ?>
 				</div>
