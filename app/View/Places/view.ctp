@@ -48,8 +48,8 @@
 		  </strong>
 		</address>
 		<?php echo $place['Place']['aditionalinfo']?>
-
-		<section id="offfers" class="section_card" >
+<div class="section_offers">
+		<section id="offers" class="section_card" >
 			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
 					Ofertes Actuals 
@@ -65,17 +65,17 @@
 					 <?php foreach ($offers as $offer): ?>
 						<div class="col-md-1">
 							<div style="background-color: #333; width:50px; height:50px; background:url('https://cdn1.iconfinder.com/data/icons/customicondesignoffice2/256/FAQ.png') center center; background-size: cover;" class="img-circle">
-							<td>
+							<br>
 								<?php echo $this->Html->link($offer['Offer']['title'],
 								array('controller' => 'offers', 'action' => 'view', 
 								$offer['Offer']['id'])); ?>
-							</td>
+							
 						</div>
 					<?php endforeach; ?>
 				</div>
 			</div>
 		</section>
-
+	</div>
 		 <section id="opinions" class="section_card" >
 			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3 style="color:#8a8888">
