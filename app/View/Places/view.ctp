@@ -98,7 +98,8 @@
 											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif') center center; background-size: cover;" class="img-rounded">
 											</div>
 											<div class="progress">
-												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>">
+												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>" style="width: <?php echo $opinion['Opinion']['qualification']; ?>">
+													<span class="sr-only"> <?php echo $opinion['Opinion']['qualification']; ?> Complete</span>
 												</div>
 											</div>
 											<?php echo $opinion['Opinion']['qualification']; ?>
@@ -107,10 +108,9 @@
 									</td>
 									<td style="border-top:none">
 										<p style="box-shadow: 0 1px 6px #3276b1; position:relative; padding:15px; border-color:#3276b1; border-style:solid; border-radius:10px; border-width:0px">
-											<h4> <?php echo $this->Html->link($opinion['Opinion']['coworker'],
+											<?php echo $this->Html->link($opinion['Opinion']['coworker'],
 													array('controller' => 'users', 'action' => 'view', 
 													$opinion['Opinion']['coworkerid'])); ?>
-											</h4>
 											<?php echo $opinion['Opinion']['text']; ?>
 										</p>
 									</td>
