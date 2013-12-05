@@ -65,6 +65,7 @@
 					 <?php foreach ($offers as $offer): ?>
 						<div class="col-md-1" style="padding:2px">
 							<div style="background-color: #333; width:50px; height:50px; background:url('https://cdn1.iconfinder.com/data/icons/customicondesignoffice2/256/FAQ.png') center center; background-size: cover;" class="img-circle">
+							</div>
 							<br>
 								<?php echo $this->Html->link($offer['Offer']['title'],
 								array('controller' => 'offers', 'action' => 'view', 
