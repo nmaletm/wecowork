@@ -48,39 +48,33 @@
 		  </strong>
 		</address>
 		<?php echo $place['Place']['aditionalinfo']?>
-		<h3> Ofertes Actuals 
-			<?php echo $this->Html->link('Afegir Oferta',
+
+		<section id="offfers" class="section_card" >
+			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
+				<h3 style="color:#8a8888">
+					Ofertes Actuals 
+					<?php echo $this->Html->link('Afegir Oferta',
 							array('controller' => 'offers', 'action' => 'add', 
 							$place['Place']['id']),
 							array('class' => 'btn btn-primary pull-right')); ?>
-		  	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
-		 </h3>
-
-		 <table class="table">
-		 	<thead>
-		 		<tr>
-					<th>Títol</th>
-					<th>Date</th>
-					<th>Informació</th>
-					<th>Espai</th>
-				</tr>
-		 	</thead>
-		 	<tbody>
-				<!-- loop to print all the offers -->
-				<?php foreach ($offers as $offer): ?>
-					<tr>
-						<td>
-							<?php echo $this->Html->link($offer['Offer']['title'],
-							array('controller' => 'offers', 'action' => 'view', 
-							$offer['Offer']['id'])); ?>
-						</td>
-						<td><?php echo $offer['Offer']['publicationdate']; ?></td>
-						<td><?php echo $offer['Offer']['information']; ?></td>
-						<td><?php echo $offer['Offer']['placeid']; ?></td>
-					</tr>
-				<?php endforeach; ?>
-			</tbody>
-		 </table>
+				</h3>
+				
+			</div>
+			<div class="body" style="padding-top:5px">
+				<div class="row-fluid">
+					 <?php foreach ($offers as $offer): ?>
+						<div class="col-md-1">
+							<div style="background-color: #333; width:50px; height:50px; background:url('https://cdn1.iconfinder.com/data/icons/customicondesignoffice2/256/FAQ.png') center center; background-size: cover;" class="img-circle">
+							<td>
+								<?php echo $this->Html->link($offer['Offer']['title'],
+								array('controller' => 'offers', 'action' => 'view', 
+								$offer['Offer']['id'])); ?>
+							</td>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</section>
 
 		 <section id="opinions" class="section_card" >
 			<div class="header" style="border-width: 1px; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
