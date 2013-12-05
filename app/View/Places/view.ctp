@@ -63,8 +63,8 @@
 			<div class="body" style="padding-top:5px">
 				<div class="row">
 					 <?php foreach ($offers as $offer): ?>
-						<div class="col-md-1">
-							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('https://cdn1.iconfinder.com/data/icons/customicondesignoffice2/256/FAQ.png') center center; background-size: cover;" class="img-circle">
+						<div class="col-md-1" style="margin:8px">
+							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('http://2.bp.blogspot.com/-bgTYIiX4nKI/TiYToQPKH2I/AAAAAAAAlro/mv1Uyz1oMRQ/s1600/sala-blanca.jpg') center center; background-size: cover;" class="img-circle">
 							</div>
 							<?php echo $this->Html->link($offer['Offer']['title'],
 							array('controller' => 'offers', 'action' => 'view', 
