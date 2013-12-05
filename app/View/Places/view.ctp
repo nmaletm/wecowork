@@ -99,7 +99,7 @@
 											<br>
 											<div class="progress">
 												<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-value-now="<?php echo $opinion['Opinion']['qualification']; ?>" style="width: <?php echo $opinion['Opinion']['qualification']*20;?>%">
-													<span> <?php echo $opinion['Opinion']['qualification']; ?> </span>
+													<span> <?php echo $opinion['Opinion']['qualification']; ?> / 5 </span>
 												</div>
 											</div>	
 										</div>
