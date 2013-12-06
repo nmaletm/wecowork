@@ -15,6 +15,7 @@
         echo $this->Form->input('password', array('label' => 'Contrasenya', 'placeholder' => "Contrasenya")); 
         echo $this->Form->input('email', array('label' => 'Correu', 'placeholder' => "Correu"));
         echo $this->Form->input('name', array('label' => 'Nom', 'placeholder' => "Nom"));
+        echo $this->Form->input('type', array('type' => 'hidden', 'value' => $this->User->coworkerType);
     ?>
 	<?php echo $this->Form->submit('Registrar', array(
 		'div' => 'form-group',
