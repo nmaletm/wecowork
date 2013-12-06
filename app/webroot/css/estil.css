@@ -7,6 +7,10 @@ body {
   width: 220px;
 }
 
+@import url(//fonts.googleapis.com/css?family=Antic+Slab);
+.brand{
+  font-family: 'Antic Slab', serif;
+}
 
 /* sticky footer: */
 

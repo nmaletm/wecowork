@@ -41,7 +41,7 @@
                                 <?php echo $this->Html->link('WeCowork', array(
                                         'controller' => 'home',
                                         'action' => 'index'
-                                ), array('class' => 'navbar-brand')); ?>
+                                ), array('class' => 'navbar-brand brand')); ?>
                         </div>
 
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -133,7 +133,7 @@
     <div id="footer">
       <div class="container">
         <p class="text-muted">
-            WeCowork &copy; 2013 &nbsp; - &nbsp; 
+            <span class="brand">WeCowork</span> &copy; 2013 &nbsp; - &nbsp; 
             <a href="#"><b>Català</b></a> &nbsp; - &nbsp; 
             <a href="#">Español</a> &nbsp; - &nbsp; 
             <a href="#">English</a>
