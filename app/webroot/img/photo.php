@@ -20,7 +20,7 @@ else if($filetype == "jpg"){
 	header("Content-Type: image/jpeg");
 	$path .= ".jpg";
 }
-header("Content-Length: " .(string)(filesize($path)) );
+//header("Content-Length: " .(string)(filesize($path)) );
 
 
 include $path;
