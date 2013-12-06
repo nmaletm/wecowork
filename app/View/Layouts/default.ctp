@@ -70,6 +70,24 @@
                                                 )); ?></li>
                                         </ul>
                                     </li>
+<? if($authUser->isCompany()){ ?>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Gestionar espais
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><?php echo $this->Html->link('Veure espais', array(
+                                                    'controller' => 'places',
+                                                    'action' => 'index'
+                                                )); ?></li>
+                                            <li><?php echo $this->Html->link('Afegir espai', array(
+                                                    'controller' => 'places',
+                                                    'action' => 'add'
+                                                )); ?></li>
+                                        </ul>
+                                    </li>
+<? } ?>
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             Missatges
