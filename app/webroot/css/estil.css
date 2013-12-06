@@ -1,3 +1,5 @@
+@import url('//fonts.googleapis.com/css?family=Antic+Slab');
+
 body {
   padding-top: 70px; /* 70px to make the container go all the way to the bottom of the topbar */
 }
@@ -7,7 +9,6 @@ body {
   width: 220px;
 }
 
-@import url(//fonts.googleapis.com/css?family=Antic+Slab);
 .brand{
   font-family: 'Antic Slab', serif;
 }
