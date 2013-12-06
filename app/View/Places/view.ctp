@@ -65,7 +65,9 @@
 			<div class="body" style="padding-top:5px">
 				<div class="row">
 					 <?php foreach ($offers as $offer): ?>
-						<div class="col-md-1 offer" style="margin:8px" data-toggle="tooltip" data-placement="bottom" title="<?php echo $offer['Offer']['information']; ?>" data-original-title="<?php echo $offer['Offer']['information']; ?> aaaaa">
+						<div class="col-md-1 offer" style="margin:8px" data-placement="bottom" 
+							data-toggle="popover" 
+        					data-content="<?php echo $offer['Offer']['information']; ?>">
 							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('http://2.bp.blogspot.com/-bgTYIiX4nKI/TiYToQPKH2I/AAAAAAAAlro/mv1Uyz1oMRQ/s1600/sala-blanca.jpg') center center; background-size: cover;" class="img-circle">
 							</div>
 							<?php echo $offer['Offer']['title']; ?>
@@ -131,5 +133,8 @@
 	</div>
 </div>
 <script>
-$('.offer').tooltip('show');
+$('[data-toggle="popover"]').popover({
+    trigger: 'hover',
+        'placement': 'top'
+});
 </script>
