@@ -39,11 +39,11 @@ class User extends AppModel{
 	}
 
 	public function isCompany(){
-		return $this->data['type'] == User::$companyType;
+		return $this->data['type'] == self::$companyType;
 	}
 
 	public function isCoworker(){
-		return $this->data['type'] == User::$coworkerType;
+		return $this->data['type'] == self::$coworkerType;
 	}
 
 }
