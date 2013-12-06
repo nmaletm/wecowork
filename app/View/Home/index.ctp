@@ -22,8 +22,4 @@ body{
   width: 100%;
   background: url('/img/home/1.jpg') repeat scroll center center / cover;
 }
-.home-search-box{
-	top: 45%;
-	position: absolute;
-}
 </style>
