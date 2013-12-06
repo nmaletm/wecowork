@@ -10,9 +10,8 @@ if(!file_exists($path)){
 	$path =  $type."/".$default.".png";
 }
 
+header('Content-Type: image/png');
 include $path;
 
-$filetype = mime_content_type($path);
-header('Content-Type: image/png');
 
 ?>
