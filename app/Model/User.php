@@ -45,5 +45,5 @@ class User extends AppModel{
 	public function isCoworker(){
 		return $this->data['type'] == User::$coworkerType;
 	}
-}
+
 }
