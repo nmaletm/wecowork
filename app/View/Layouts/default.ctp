@@ -30,6 +30,10 @@
 	        echo $this->fetch('meta');
 	        echo $this->fetch('css');
         ?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <?php echo $this->fetch('script'); ?>
 </head> 
 <body>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -126,9 +130,6 @@
 
         </div><!-- /container -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-        <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-        <?php echo $this->fetch('script'); ?>
+ 
 </body>
 </html>
