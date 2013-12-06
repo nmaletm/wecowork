@@ -1,25 +1,28 @@
 
-<div class="home-search">
 
 <div class="users form">
 <?php echo $this->Form->create('Place', array(
-	'inputDefaults' => array(
-		'div' => 'form-group',
-		'wrapInput' => false,
-		'class' => 'form-control',
-		'action' => 'search'
-	),
-	'class' => 'well'
+	'action' => 'search'
 )); ?>
-    <fieldset>
-    <?php
-        echo $this->Form->input('name', array('label' => 'Cercar espai', 'placeholder' => "Quin és el seu nom o la seva adreça?"));
-    ?>
-	<?php echo $this->Form->submit('Cercar', array(
-		'div' => 'form-group',
-		'class' => 'btn btn-default'
-	)); ?>
-    </fieldset>
+   <div class="input-group">
+      <?php
+        echo $this->Form->input('name', array('placeholder' => "Que estas cercant?", 'class' => 'form-control'));
+    	?>
+      <span class="input-group-btn">
+        <?php echo $this->Form->submit('Cercar!', array(
+			'div' => 'form-group',
+			'class' => 'btn btn-default'
+		)); ?>
+      </span>
+  </div>
 <?php echo $this->Form->end(); ?>
 </div>
-</div>
+
+<style type="text/css">
+body{
+  height: 100%;
+  width: 100%;
+  background: url('/img/home/1.jpg') repeat scroll center center / cover;
+}
+
+</style>
