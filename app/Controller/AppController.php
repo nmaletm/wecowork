@@ -37,7 +37,7 @@ class AppController extends Controller {
     	'DebugKit.Toolbar',
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'home', 'action' => 'index'),
+            'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
             'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
             'flash' => array(
                 'element' => 'alert',
@@ -58,6 +58,9 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
-        $this->set('authUser', $this->Auth->user());
+        $user = $this->Auth->user();
+        $this->set('authUser', $user);
+        $this->set('isCompany', $user->isCompany());
+        $this->set('isCoworker', $user->isCoworker());
     }
 }

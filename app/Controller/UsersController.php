@@ -9,10 +9,10 @@ class UsersController extends AppController {
         $this->Auth->allow('add','addCoworker','addCompany','login');
     }
 
-    public function index($id = null) {
-        $this->User->id = $id;
-        $this->set('user', $this->User->read());
-        $conditions = array("Place.ownerid" => $id);
+    public function index() {
+        $user = $this->Auth->user();
+        $this->set('user', $user);
+        $conditions = array("Place.ownerid" => $user['id']);
         $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
     }
 

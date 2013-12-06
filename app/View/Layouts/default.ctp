@@ -70,7 +70,7 @@
                                                 )); ?></li>
                                         </ul>
                                     </li>
-<? if($authUser->isCompany()){ ?>
+<? if($isCompany){ ?>
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             Gestionar espais
