@@ -3,6 +3,7 @@
 $type = $_REQUEST['type'];
 $id = $_REQUEST['id'];
 $default = $_REQUEST['default'];
+$filetype = $_REQUEST['filetype'];
 
 $path = $type."/".$id.".png";
 
