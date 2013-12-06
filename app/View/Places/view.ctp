@@ -51,7 +51,7 @@
 		<br>
 		<br>
 <div class="section_offers">
-		<section id="offers" class="section_card" >
+		<section  class="section_card" >
 			<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px; background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3>
 					Ofertes Actuals 
@@ -65,7 +65,7 @@
 			<div class="body" style="padding-top:5px">
 				<div class="row">
 					 <?php foreach ($offers as $offer): ?>
-						<div class="col-md-1" style="margin:8px" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<?php echo $offer['Offer']['information']; ?> aaaaa">
+						<div class="col-md-1 offer" style="margin:8px" data-toggle="tooltip" data-placement="bottom" title="<?php echo $offer['Offer']['information']; ?>" data-original-title="<?php echo $offer['Offer']['information']; ?> aaaaa">
 							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('http://2.bp.blogspot.com/-bgTYIiX4nKI/TiYToQPKH2I/AAAAAAAAlro/mv1Uyz1oMRQ/s1600/sala-blanca.jpg') center center; background-size: cover;" class="img-circle">
 							</div>
 							<?php echo $offer['Offer']['title']; ?>
@@ -92,7 +92,7 @@
 				 	<tbody>
 						<?php foreach ($opinions as $opinion): ?>
 								<tr>
-									<td id="offers" class="col-md-1" style="border-top:none">
+									<td class="col-md-1" style="border-top:none">
 										<div>
 											<div style="background-color: #333; width:50px; height:50px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $opinion['Opinion']['coworker']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
 											</div>
@@ -130,7 +130,6 @@
 		 <div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 	</div>
 </div>
-
-$('#offers').tooltip('show')
-
-
+<script>
+$('.offer').tooltip('show');
+</script>
