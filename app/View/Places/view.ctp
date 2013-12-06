@@ -120,7 +120,7 @@
 		</section>	
 	</div>
 	<div class="col-md-4">
-		<div style="width:200px; height:200px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $user['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-rounded">
+		<div style="width:200px; height:200px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $place['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-rounded">
 		</div>
 		<br>
 		<p class="pull-right" style="margin-top:10px">
