@@ -133,8 +133,10 @@
 	</div>
 </div>
 <script>
-$('[data-toggle="popover"]').popover({
-    trigger: 'hover',
-        'placement': 'top'
+$(function() {
+	$('[data-toggle="popover"]').popover({
+    	trigger: 'hover',
+        	'placement': 'top'
+	});
 });
 </script>
