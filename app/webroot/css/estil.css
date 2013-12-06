@@ -9,6 +9,15 @@ body {
 
 
 
+
+.home-search{
+  height: 100%;
+  width: 100%;
+  background: url('/img/home/1.jpg') repeat scroll center center / cover;
+}
+
+/* sticky footer: */
+
 html, body {
     height: 100%;
 }
