@@ -95,17 +95,6 @@
                                 </ul>
 <? if($authUser) { ?>
 								<ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            Idioma
-                                            <b class="caret"></b>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Català</a></li>
-                                            <li><a href="#">Español</a></li>
-                                            <li><a href="#">English</a></li>
-                                        </ul>
-                                    </li>
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											<?=$authUser['name']?>
@@ -143,7 +132,12 @@
     </div>
     <div id="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">
+            WeCowork &copy; 2013 &nbsp; - &nbsp; 
+            <a href="#"><b>Català</b></a> &nbsp; - &nbsp; 
+            <a href="#">Español</a> &nbsp; - &nbsp; 
+            <a href="#">English</a>
+        </p>
       </div>
     </div>
 
