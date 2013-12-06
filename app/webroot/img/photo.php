@@ -25,7 +25,6 @@ if(!file_exists($path)){
 
 header("Content-Length: " .(string)(filesize($path)) );
 
-include $path;
-
+echo file_get_contents($path);
 
 ?>
