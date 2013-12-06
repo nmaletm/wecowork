@@ -1,20 +1,34 @@
 
 
 
-<div class="row home-search-box">
-  <div class="col-md-6 col-md-offset-3">
-	<?php echo $this->Form->create('Place', array(
-		'action' => 'search'
-	)); ?>
-		<div class="input-group">
-			<input type="text" class="form-control" name="data[Place][name]">
-			<span class="input-group-btn">
-				<button class="btn btn-default" type="button">Cercar!</button>
-			</span>
-		</div>
-	<?php echo $this->Form->end(); ?>
-	</div>
-</div>
+<div class="row">
+        <div class="col-lg-12 text-center v-center">
+             <h1 class="">WeCowork</h1>
+
+            <p class="lead">Cerca el teu espai de cowork!</p>
+            <br class="">
+            <br class="">
+            <br class="">
+            
+			<?php echo $this->Form->create('Place', array(
+				'action' => 'search',
+				'class' => 'col-lg-12'
+			)); ?>
+				<div class="input-group">
+					<input type="text" class="form-control" name="data[Place][name]">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Cercar!</button>
+					</span>
+				</div>
+			<?php echo $this->Form->end(); ?>
+        </div>
+    </div>
+    <!-- /row -->
+    <br class="">
+    <br class="">
+    <br class="">
+    <br class="">
+    <br class="">
 
 <style type="text/css">
 body{
