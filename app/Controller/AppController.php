@@ -58,7 +58,8 @@ class AppController extends Controller {
     );
 
     public function beforeFilter() {
-        $this->User->id = ($this->Auth->user())['id'];
+        $user = $this->Auth->user();
+        $this->User->id = $user['id'];
         $user = $this->User->read();
 
         $this->set('authUser', $user);
