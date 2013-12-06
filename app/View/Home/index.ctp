@@ -17,7 +17,7 @@
 				<div class="input-group" style="max-width:600px;text-align:center;margin:0 auto;">
 					<input type="text" class="form-control" name="data[Place][name]">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Cercar!</button>
+						<button class="btn btn-default" type="submit">Cercar!</button>
 					</span>
 				</div>
 			<?php echo $this->Form->end(); ?>

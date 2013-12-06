@@ -63,10 +63,13 @@ class UsersController extends AppController {
     }
 
     public function ctSearchUser($q){
+        /*
+            Amb PostgreSQL  ILIKE  és un like no case sensitive!
+        */
         $conditions = array('OR' => 
                 array(
-                    "User.username  LIKE" => "%".$q."%", 
-                    "User.name  LIKE" => "%".$q."%",
+                    "User.username  ILIKE" => "%".$q."%", 
+                    "User.name  ILIKE" => "%".$q."%",
                 )
             );
         $list = $this->User->find('all', array('conditions' => $conditions));

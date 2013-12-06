@@ -39,10 +39,13 @@ class PlacesController extends AppController {
     }
 
     public function ctSearchPlace($q){
+        /*
+            Amb PostgreSQL  ILIKE  és un like no case sensitive!
+        */
         $conditions = array('OR' => 
                 array(
-                    "Place.name  LIKE" => "%".$q."%", 
-                    "Place.address  LIKE" => "%".$q."%",
+                    "Place.name  ILIKE " => "%".$q."%", 
+                    "Place.address  ILIKE " => "%".$q."%",
                 )
             );
         $list = $this->Place->find('all', array('conditions' => $conditions));
