@@ -10,16 +10,8 @@
         </title>
         <!-- Le styles -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-        <style>
-        body {
-                padding-top: 70px; /* 70px to make the container go all the way to the bottom of the topbar */
-        }
-        .affix {
-                position: fixed;
-                top: 60px;
-                width: 220px;
-        }
-        </style>
+        <link rel="stylesheet" href="/css/estil.css">
+
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -144,10 +136,15 @@
 
         <div class="container">
 
-                <?php echo $this->fetch('content'); ?>
-
+            <?php echo $this->fetch('content'); ?>
+            <div id="push"></div>
         </div><!-- /container -->
 
- 
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </div>
+
 </body>
 </html>
