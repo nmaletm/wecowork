@@ -32,6 +32,10 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    /* Això no hauria d'estar aquí, i a sobre està repetit al model User */
+    public static $coworkerType = 1;
+    public static $companyType = 2;
+
     var $uses = array('User');
 
     public $components = array(
@@ -61,7 +65,7 @@ class AppController extends Controller {
     public function beforeFilter() {
         $user = $this->Auth->user();
         $this->set('authUser', $user);
-        $this->set('isCompany', $user['type'] == User::$companyType);
-        $this->set('isCoworker', $user['type'] == User::$coworkerType);
+        $this->set('isCompany', $user['type'] == self::$companyType);
+        $this->set('isCoworker', $user['type'] == self::$coworkerType);
     }
 }
