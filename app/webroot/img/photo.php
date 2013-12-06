@@ -7,7 +7,7 @@ $default = $_REQUEST['default'];
 $path = $type."/".$id;
 
 if(!file_exists($path)){
-	$$path =  $type."/".$default;
+	$path =  $type."/".$default;
 }
 
 include $path;
