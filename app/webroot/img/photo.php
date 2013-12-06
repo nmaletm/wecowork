@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 
 $type = $_REQUEST['type'];
 $id = $_REQUEST['id'];
