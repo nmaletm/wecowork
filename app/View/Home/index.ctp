@@ -40,12 +40,12 @@ body{
 
 h1 {
   font-size:80px;
-  color:#5C5C5C;
-  text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
+  color:#222;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
 }
 
 .lead {
-	color:#5C5C5C;
+	color:#222;
 	text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
 }
 </style>
