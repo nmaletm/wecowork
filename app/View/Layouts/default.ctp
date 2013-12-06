@@ -28,6 +28,7 @@
         <?php echo $this->fetch('script'); ?>
 </head> 
 <body>
+<div id="wrap">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                         <div class="navbar-header">
@@ -139,7 +140,7 @@
             <?php echo $this->fetch('content'); ?>
             <div id="push"></div>
         </div><!-- /container -->
-
+    </div>
     <div id="footer">
       <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
