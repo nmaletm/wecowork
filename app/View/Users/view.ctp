@@ -76,8 +76,7 @@
 	</div>
 	<div id="user_info_tab" class="col-md-4">
 		<div class="user_avatar">
-			<!--<img src="http://www.progressoutofpoverty.org/sites/all/themes/orbit_theme/images/no_user.gif" class="img-rounded"/>-->
-			<div style="width:200px; height:200px; background:url('/img/photo.php?type=users&id=<?php echo $user['User']['username']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
+			<div style="width:200px; height:200px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $user['User']['username']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
 			</div>
 			
 			<h2 class="fn"> <?php echo $user['User']['name']; ?> </h2>

@@ -94,7 +94,7 @@
 								<tr>
 									<td id="offers" class="col-md-1" style="border-top:none">
 										<div>
-											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.hdwallpapersdj.com/wp-content/uploads/2013/09/15094629-buddhist-monk-cartoon-vector.jpg') center center; background-size: cover;" class="img-rounded">
+											<div style="background-color: #333; width:50px; height:50px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $opinion['Opinion']['coworker']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
 											</div>
 											<br>
 											<div class="progress">
@@ -120,7 +120,7 @@
 		</section>	
 	</div>
 	<div class="col-md-4">
-		<div class="place_avatar pull-right" style="width:300px; height:300px; background:url('http://www.hubsarasota.com/files/coworking-4.jpg') center center; background-size: cover;" class="img-circle">
+		<div style="width:200px; height:200px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $user['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-rounded">
 		</div>
 		<br>
 		<p class="pull-right" style="margin-top:10px">
