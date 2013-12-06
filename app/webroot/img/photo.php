@@ -6,22 +6,24 @@ $id = $_REQUEST['id'];
 $default = $_REQUEST['default'];
 $filetype = $_REQUEST['filetype'];
 
-$path = $type."/".$id.".png";
-
-if(!file_exists($path)){
-	$path =  $type."/".$default
-}
+$path = $type."/".$id;
 
 if($filetype == "png"){
 	header("Content-Type: image/png");
 	$path .= ".png";
+	$default .= ".png";
 }
 else if($filetype == "jpg"){
 	header("Content-Type: image/jpeg");
 	$path .= ".jpg";
+	$default .= ".jpg";
 }
-//header("Content-Length: " .(string)(filesize($path)) );
 
+if(!file_exists($path)){
+	$path =  $type."/".$default;
+}
+
+header("Content-Length: " .(string)(filesize($path)) );
 
 include $path;
 

@@ -76,7 +76,7 @@
 	</div>
 	<div id="user_info_tab" class="col-md-4">
 		<div class="user_avatar">
-			<div style="width:200px; height:200px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $user['User']['username']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
+			<div style="width:180px; height:180px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $user['User']['username']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
 			</div>
 			
 			<h2 class="fn"> <?php echo $user['User']['name']; ?> </h2>
