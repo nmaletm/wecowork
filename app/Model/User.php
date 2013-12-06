@@ -1,6 +1,8 @@
 <?php
 class User extends AppModel{
-
+	public static $coworkerType = 1;
+	public static $companyType = 2;
+	
 	public $name = 'User';
 	public $primaryKey = 'id';
 

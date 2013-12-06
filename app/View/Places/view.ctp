@@ -68,7 +68,7 @@
 						<div class="col-md-1 offer" style="margin:8px" data-placement="bottom" 
 							data-toggle="popover" 
         					data-content="<?php echo $offer['Offer']['information']; ?>">
-							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('http://2.bp.blogspot.com/-bgTYIiX4nKI/TiYToQPKH2I/AAAAAAAAlro/mv1Uyz1oMRQ/s1600/sala-blanca.jpg') center center; background-size: cover;" class="img-circle">
+							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $place['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-circle">
 							</div>
 							<?php echo $offer['Offer']['title']; ?>
 						</div>
