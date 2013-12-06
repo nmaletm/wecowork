@@ -7,6 +7,7 @@ body {
   width: 220px;
 }
 
+
 /* sticky footer: */
 
 html, body {
@@ -23,7 +24,7 @@ html, body {
     height: 60px;
 }
 #wrap > .container {
-    padding: 60px 15px 0;
+    padding: 0px 15px 0;
 }
 .container .text-muted {
     margin: 20px 0;
