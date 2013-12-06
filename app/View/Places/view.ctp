@@ -17,7 +17,7 @@
 
   function codeAddress(map) {
     //In this case it gets the address from an element on the page, but obviously you  could just pass it to the method instead
-    var address = '<?php echo $place['Place']['address']?>';
+    var address = '<?php echo str_replace("'","\'",$place['Place']['address'])?>';
 
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
