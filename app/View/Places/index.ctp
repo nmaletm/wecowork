@@ -5,7 +5,7 @@
 					<span class="glyphicon glyphicon-home" style="padding-right:10px;padding-left:10px"> 
 					</span>
 					Espais de cowork
-					<?php echo $this->Html->link('Gestionar Espais',
+					<?php echo $this->Html->link('Afegir Espai',
 											array(
 													'controller' => 'places', 
 													'action' => 'add', 
@@ -23,6 +23,8 @@
 							<th>Nom</th>
 							<th>Teléfon</th>
 							<th>Adreça</th>
+							<th></th>
+							<th></th>
 						</tr>
 				 	</thead>
 				 	<tbody>
@@ -36,6 +38,16 @@
 								</td>
 								<td><?php echo $place['Place']['phone']; ?></td>
 								<td><?php echo $place['Place']['address']; ?></td>
+								<td>
+									<button type="button" class="btn btn-default btn-lg">
+  										<span class="glyphicon glyphicon-edit"></span> Editar
+									</button>
+								</td>
+								<td>
+									<button type="button" class="btn btn-danger btn-lg">
+  										<span class="glyphicon glyphicon-remove-circle"></span>
+									</button>
+								</td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>

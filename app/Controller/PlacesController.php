@@ -21,6 +21,8 @@ class PlacesController extends AppController {
     }
 
     public function index($ownerid = null) {
+        $this->User->id = $ownerid;
+        $this->set('user', $this->User->read());
         $conditions = array("Place.ownerid" => $ownerid);
         $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
     }
