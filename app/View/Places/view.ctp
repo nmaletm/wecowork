@@ -36,7 +36,6 @@
 	<div class="col-md-8">
 		<h1>
 			<?php echo $place['Place']['name']?>
-			aaaaaaaaaaaaaaaaaa
 		</h1>
 		<address>
 		  <a href="<?php echo $place['Place']['website']?>">
@@ -123,7 +122,7 @@
 		</section>	
 	</div>
 	<div class="col-md-4">
-		<div style="width:200px; height:200px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $place['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-rounded">
+		<div style="width:300px; height:300px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $place['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-rounded pull-right">
 		</div>
 		<br>
 		<p class="pull-right" style="margin-top:10px">
@@ -137,7 +136,7 @@
 $(function() {
 	$('[data-toggle="popover"]').popover({
     	trigger: 'hover',
-        	'placement': 'top'
+        	'placement': 'bottom'
 	});
 });
 </script>

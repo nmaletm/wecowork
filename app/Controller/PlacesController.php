@@ -65,7 +65,7 @@ class PlacesController extends AppController {
 		$this->Place->set(array('ownerid' => $ownerid));
 		if ($this->Place->save()) {
 			$this->Session->setFlash("S'ha guardat l'espai correctament");
-			return $this->redirect(array('controller' => 'Users', 'action' => 'view', $ownerid));
+			return $this->redirect(array('controller' => 'Places', 'action' => 'index', $ownerid));
 		}
 		else{
 			debug($this->Place->validationErrors);
