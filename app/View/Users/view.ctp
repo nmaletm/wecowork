@@ -8,10 +8,10 @@
 					<span class="glyphicon glyphicon-home" style="padding-right:10px;padding-left:10px"> 
 					</span>
 					Espais de cowork
-					<?php echo $this->Html->link('Afegir Espai',
+					<?php echo $this->Html->link('Gestionar Espais',
 											array(
 													'controller' => 'places', 
-													'action' => 'add', 
+													'action' => 'index', 
 													$user['User']['id']
 												),
 											array('class' => 'btn btn-primary pull-right')

@@ -20,8 +20,9 @@ class PlacesController extends AppController {
         //$this->set('offer', $this->Offer->find('all', array('conditions' => array($id => $this->request->data['Offer']['placeid']))));
     }
 
-    public function index() {
-        $this->set('places', $this->Place->find('all'));
+    public function index($ownerid = null) {
+        $conditions = array("Place.ownerid" => $ownerid);
+        $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
     }
 
     public function add($ownerid = null) {
