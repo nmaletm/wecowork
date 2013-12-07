@@ -36,6 +36,7 @@
 	<div class="col-md-8">
 		<h1>
 			<?php echo $place['Place']['name']?>
+			aaaaaaaaaaaaaaaaaa
 		</h1>
 		<address>
 		  <a href="<?php echo $place['Place']['website']?>">
