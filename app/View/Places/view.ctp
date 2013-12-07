@@ -17,7 +17,7 @@
 
   function codeAddress(map) {
     //In this case it gets the address from an element on the page, but obviously you  could just pass it to the method instead
-    var address = '<?php echo $place['Place']['address']?>';
+    var address = '<?php echo str_replace("'","\'",$place['Place']['address'])?>';
 
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
@@ -52,7 +52,7 @@
 		<br>
 		<br>
 <div class="section_offers">
-		<section id="offers" class="section_card" >
+		<section  class="section_card" >
 			<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px; background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3>
 					Ofertes Actuals 
@@ -66,8 +66,10 @@
 			<div class="body" style="padding-top:5px">
 				<div class="row">
 					 <?php foreach ($offers as $offer): ?>
-						<div class="col-md-1" style="margin:8px" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<?php echo $offer['Offer']['information']; ?> aaaaa">
-							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('http://2.bp.blogspot.com/-bgTYIiX4nKI/TiYToQPKH2I/AAAAAAAAlro/mv1Uyz1oMRQ/s1600/sala-blanca.jpg') center center; background-size: cover;" class="img-circle">
+						<div class="col-md-1 offer" style="margin:8px" data-placement="bottom" 
+							data-toggle="popover" 
+        					data-content="<?php echo $offer['Offer']['information']; ?>">
+							<div style="padding:5px; background-color: #333; width:50px; height:50px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $place['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-circle">
 							</div>
 							<?php echo $offer['Offer']['title']; ?>
 						</div>
@@ -93,9 +95,9 @@
 				 	<tbody>
 						<?php foreach ($opinions as $opinion): ?>
 								<tr>
-									<td id="offers" class="col-md-1" style="border-top:none">
+									<td class="col-md-1" style="border-top:none">
 										<div>
-											<div style="background-color: #333; width:50px; height:50px; background:url('http://www.hdwallpapersdj.com/wp-content/uploads/2013/09/15094629-buddhist-monk-cartoon-vector.jpg') center center; background-size: cover;" class="img-rounded">
+											<div style="background-color: #333; width:50px; height:50px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $opinion['Opinion']['coworker']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
 											</div>
 											<br>
 											<div class="progress">
@@ -121,7 +123,7 @@
 		</section>	
 	</div>
 	<div class="col-md-4">
-		<div class="place_avatar pull-right" style="width:300px; height:300px; background:url('http://www.hubsarasota.com/files/coworking-4.jpg') center center; background-size: cover;" class="img-circle">
+		<div style="width:200px; height:200px; background:url('/img/photo.php?filetype=jpg&type=places&id=<?php echo $place['Place']['id']; ?>&default=no_foto') center center; background-size: cover;" class="img-rounded">
 		</div>
 		<br>
 		<p class="pull-right" style="margin-top:10px">
@@ -131,7 +133,11 @@
 		 <div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 	</div>
 </div>
-
-$('#offers').tooltip('show')
-
-
+<script>
+$(function() {
+	$('[data-toggle="popover"]').popover({
+    	trigger: 'hover',
+        	'placement': 'top'
+	});
+});
+</script>

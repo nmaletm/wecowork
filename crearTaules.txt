@@ -20,6 +20,7 @@ CREATE TABLE users(
   name character varying(50) DEFAULT NULL::character varying,
   sexe character varying(50) DEFAULT NULL::character varying,
   website character varying(50) DEFAULT NULL::character varying,
+  type integer,
   CONSTRAINT users_pkey PRIMARY KEY (id)
 );
 

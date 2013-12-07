@@ -10,16 +10,8 @@
         </title>
         <!-- Le styles -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-        <style>
-        body {
-                padding-top: 70px; /* 70px to make the container go all the way to the bottom of the topbar */
-        }
-        .affix {
-                position: fixed;
-                top: 60px;
-                width: 220px;
-        }
-        </style>
+        <link rel="stylesheet" href="/css/estil.css">
+
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -30,8 +22,13 @@
 	        echo $this->fetch('meta');
 	        echo $this->fetch('css');
         ?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <?php echo $this->fetch('script'); ?>
 </head> 
 <body>
+<div id="wrap">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                         <div class="navbar-header">
@@ -44,7 +41,7 @@
                                 <?php echo $this->Html->link('WeCowork', array(
                                         'controller' => 'home',
                                         'action' => 'index'
-                                ), array('class' => 'navbar-brand')); ?>
+                                ), array('class' => 'navbar-brand brand')); ?>
                         </div>
 
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -66,6 +63,24 @@
                                                 )); ?></li>
                                         </ul>
                                     </li>
+<? if($isCompany){ ?>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Gestionar espais
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><?php echo $this->Html->link('Veure espais', array(
+                                                    'controller' => 'places',
+                                                    'action' => 'index'
+                                                )); ?></li>
+                                            <li><?php echo $this->Html->link('Afegir espai', array(
+                                                    'controller' => 'places',
+                                                    'action' => 'add'
+                                                )); ?></li>
+                                        </ul>
+                                    </li>
+<? } ?>
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             Missatges
@@ -80,17 +95,6 @@
                                 </ul>
 <? if($authUser) { ?>
 								<ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            Idioma
-                                            <b class="caret"></b>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Català</a></li>
-                                            <li><a href="#">Español</a></li>
-                                            <li><a href="#">English</a></li>
-                                        </ul>
-                                    </li>
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											<?=$authUser['name']?>
@@ -122,13 +126,20 @@
 
         <div class="container">
 
-                <?php echo $this->fetch('content'); ?>
-
+            <?php echo $this->fetch('content'); ?>
+            <div id="push"></div>
         </div><!-- /container -->
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">
+            <span class="brand">WeCowork</span> &copy; 2013 &nbsp; - &nbsp; 
+            <a href="#"><b>Català</b></a> &nbsp; - &nbsp; 
+            <a href="#">Español</a> &nbsp; - &nbsp; 
+            <a href="#">English</a>
+        </p>
+      </div>
+    </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-        <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-        <?php echo $this->fetch('script'); ?>
 </body>
 </html>

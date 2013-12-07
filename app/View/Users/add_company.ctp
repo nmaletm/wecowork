@@ -17,6 +17,7 @@
         echo $this->Form->input('name', array('label' => 'Nom', 'placeholder' => "Nom"));
         echo $this->Form->input('address', array('label' => 'Adreça', 'placeholder' => "Adreça"));
         echo $this->Form->input('nif', array('label' => 'NIF', 'placeholder' => "NIF"));
+        echo $this->Form->input('type', array('type' => 'hidden', 'value' => User::$companyType));
     ?>
 	<?php echo $this->Form->submit('Registrar', array(
 		'div' => 'form-group',
