@@ -10,7 +10,7 @@
 <h3> Espais Actuals 
 	<?php echo $this->Html->link('Afegir Espai',
 					array('controller' => 'places', 'action' => 'add', 
-					<?= $this->Session->read('Auth.User.id'); ?>)); ?>
+					$user['User']['id'])); ?>
   	<!-- <a href="add" class="btn btn-default pull-right">Afegir Oferta</a> -->
  </h3>
 
