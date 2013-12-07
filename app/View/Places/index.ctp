@@ -39,7 +39,7 @@
 								<td><?php echo $place['Place']['phone']; ?></td>
 								<td><?php echo $place['Place']['address']; ?></td>
 								<td>
-									<button type="button" class="btn btn-default btn-lg">
+									<button type="button" class="btn btn-primary btn-xs">
   										<span class="glyphicon glyphicon-edit"></span> Editar
 									</button>
 								</td>
