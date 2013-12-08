@@ -130,7 +130,8 @@
 		</p>
 		<br>
 		<div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
-		<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal">
+		<br>
+		<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md pull-center" data-toggle="modal">
   				<span class="glyphicon glyphicon-send"></span> 
   				Contactar amb el propietari
 		</a>
