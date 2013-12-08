@@ -34,6 +34,22 @@
 </script>
 <div class"row">
 	<div class="col-md-8">
+		<a href="contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal">
+  			<span class="glyphicon glyphicon-send"></span> Contactar amb el propietari
+		</a>
+		<!-- Contact Modal -->
+		<div id="contactOwnerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<h3> Quin és el teu missatge pel propietari de l'espai? </h3>
+			</div>
+			<div class="modal-body">
+				<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5"></textarea>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Tancar</button>
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Enviar</button>
+			</div>
+		</div>
 		<h1>
 			<?php echo $place['Place']['name']?>
 		</h1>
