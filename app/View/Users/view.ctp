@@ -98,15 +98,16 @@
 			<a href="<?php echo $user['User']['website']; ?>"> <?php echo $user['User']['website']; ?> </a>
 		</div>
 		<? if (!$isOwner) { ?>
+			<br>
 			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal">
 	  				<span class="glyphicon glyphicon-send"></span> 
-	  				Contactar amb el propietari
+	  				Contactar amb <?php echo $user['User']['username']; ?>
 			</a>
 
 			<!-- Contact Modal -->
 			<div id="contactOwnerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-header">
-					<h3> Quin és el teu missatge pel propietari de l'espai? </h3>
+					<h3> Quin és el teu missatge per <?php echo $user['User']['username']; ?> ? </h3>
 				</div>
 				<div class="modal-body">
 					<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5"></textarea>
