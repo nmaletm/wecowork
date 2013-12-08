@@ -155,9 +155,4 @@ $(function() {
         	'placement': 'bottom'
 	});
 });
-$(function() {
-	$('[data-toggle="modal"]').modal({
-    	trigger: 'click'
-	});
-});
 </script>
