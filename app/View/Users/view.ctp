@@ -99,7 +99,7 @@
 		</div>
 		<? if (!$isOwner) { ?>
 			<br>
-			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal">
+			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md" data-toggle="modal">
 	  				<span class="glyphicon glyphicon-send"></span> 
 	  				Contactar amb <?php echo $user['User']['username']; ?>
 			</a>
