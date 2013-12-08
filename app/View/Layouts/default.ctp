@@ -73,7 +73,7 @@
                                             <li><?php echo $this->Html->link('Veure espais', array(
                                                     'controller' => 'places',
                                                     'action' => 'index',
-                                                    $authUser['User']['id']
+                                                    $authUser['id']
                                                 )); ?></li>
                                             <li><?php echo $this->Html->link('Afegir espai', array(
                                                     'controller' => 'places',
