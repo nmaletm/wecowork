@@ -34,9 +34,7 @@
 </script>
 <div class"row">
 	<div class="col-md-8">
-		<a href="contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal">
-  			<span class="glyphicon glyphicon-send"></span> Contactar amb el propietari
-		</a>
+		
 		<!-- Contact Modal -->
 		<div id="contactOwnerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-header">
@@ -52,6 +50,10 @@
 		</div>
 		<h1>
 			<?php echo $place['Place']['name']?>
+			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal">
+  				<span class="glyphicon glyphicon-send"></span> 
+  				Contactar amb el propietari
+			</a>
 		</h1>
 		<address>
 		  <a href="<?php echo $place['Place']['website']?>">
