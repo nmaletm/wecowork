@@ -50,34 +50,31 @@
 		</section>
 		<br>
 		<br>
-		<section id="messages" class="section_card" style="border-radius:5px; border-style:solid; border-width:1px; border-color:#d9d9d9">
-			<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
-				<h3>
-					<span class="glyphicon glyphicon-envelope" style="padding-right:10px; padding-left:10px"> 
-					</span>
-					Missatges
-					<? if($isOwner) { ?>
-					<?php echo $this->Html->link('Nou Missatge',
-											array(
-													'controller' => 'places', 
-													'action' => 'add', 
-													$user['User']['id']
-												),
-											array('class' => 'btn btn-primary pull-right')
-										); ?>
-					<? } ?>
-				</h3>
-				
-			</div>
-			<div class="body" style="padding-top:5px">
-				<div style="text-align:center">
-						<h3 style="color:#8a8888"></i> No tens cap Missatge</h3>
+		<? if($isOwner) { ?>
+			<section id="messages" class="section_card" style="border-radius:5px; border-style:solid; border-width:1px; border-color:#d9d9d9">
+				<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
+					<h3>
+						<span class="glyphicon glyphicon-envelope" style="padding-right:10px; padding-left:10px"> 
+						</span>
+						Missatges
+						<?php echo $this->Html->link('Nou Missatge',
+												array(
+														'controller' => 'places', 
+														'action' => 'add', 
+														$user['User']['id']
+													),
+												array('class' => 'btn btn-primary pull-right')
+											); ?>
+					</h3>
+					
 				</div>
-			</div>
-		</section>
-	
-
-		 
+				<div class="body" style="padding-top:5px">
+					<div style="text-align:center">
+							<h3 style="color:#8a8888"></i> No tens cap Missatge</h3>
+					</div>
+				</div>
+			</section>
+		<? } ?>
 	</div>
 	<div id="user_info_tab" class="col-md-4">
 		<div class="user_avatar">
