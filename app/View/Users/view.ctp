@@ -9,7 +9,7 @@
 					</span>
 					Espais de cowork
 
-					<?php if ($isOwner): ?>
+					<? if($isOwner) { ?>
 					<?php echo $this->Html->link('Gestionar Espais',
 											array(
 													'controller' => 'places', 
@@ -18,7 +18,7 @@
 												),
 											array('class' => 'btn btn-primary pull-right')
 										); ?>
-					<?php endif; ?>
+					<? } ?>
 				</h3>
 				
 			</div>
@@ -56,6 +56,7 @@
 					<span class="glyphicon glyphicon-envelope" style="padding-right:10px; padding-left:10px"> 
 					</span>
 					Missatges
+					<? if($isOwner) { ?>
 					<?php echo $this->Html->link('Nou Missatge',
 											array(
 													'controller' => 'places', 
@@ -64,6 +65,7 @@
 												),
 											array('class' => 'btn btn-primary pull-right')
 										); ?>
+					<? } ?>
 				</h3>
 				
 			</div>
