@@ -23,6 +23,8 @@
 							<th>Nom</th>
 							<th>Teléfon</th>
 							<th>Adreça</th>
+							<th>Web</th>
+							<th>Informació Adicional</th>
 							<th></th>
 						</tr>
 				 	</thead>
@@ -37,12 +39,14 @@
 								</td>
 								<td><?php echo $place['Place']['phone']; ?></td>
 								<td><?php echo $place['Place']['address']; ?></td>
+								<td><?php echo $place['Place']['website']; ?></td>
+								<td><?php echo $place['Place']['aditionalinfo']; ?></td>
 								<td>
-									<button type="button" class="btn btn-primary btn-sm">
+									<button type="button" class="btn btn-primary btn-sm pull-right">
   										<span class="glyphicon glyphicon-edit"></span> Editar
 									</button>
-									<button type="button" class="btn btn-danger btn-sm">
-  										<span class="glyphicon glyphicon-remove-circle"></span>
+									<button type="button" class="btn btn-danger btn-sm pull-right">
+  										<span class="glyphicon glyphicon-remove-circle"></span> Esborrar
 									</button>
 								</td>
 							</tr>
