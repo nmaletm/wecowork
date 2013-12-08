@@ -55,10 +55,12 @@
 			<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px; background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
 				<h3>
 					Ofertes Actuals 
-					<?php echo $this->Html->link('Afegir Oferta',
-							array('controller' => 'offers', 'action' => 'add', 
-							$place['Place']['id']),
-							array('class' => 'btn btn-primary pull-right')); ?>
+					<? if($isOwner) { ?>
+						<?php echo $this->Html->link('Afegir Oferta',
+								array('controller' => 'offers', 'action' => 'add', 
+								$place['Place']['id']),
+								array('class' => 'btn btn-primary pull-right')); ?>
+					<? } ?>
 				</h3>
 				
 			</div>

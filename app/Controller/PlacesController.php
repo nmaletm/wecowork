@@ -10,12 +10,14 @@ class PlacesController extends AppController {
     }
 	
 	public function view($id = null) {
-        $this->Place->id = $id;
+        $place = $this->Place->id = $id;
         $this->set('place', $this->Place->read());
         $placeConditions = array("Offer.placeid" => $id);
 		$this->set('offers', $this->Offer->find('all', array('conditions' => $placeConditions)));
 		$opinionConditions = array("Opinion.placeid" => $id);
 		$this->set('opinions', $this->Opinion->find('all', array('conditions' => $opinionConditions)));
+        $user = $this->Auth->user();
+        $this->set('isOwner', $user['id'] == $place['ownerid']);
         //trying to show the offers from a place
         //$this->set('offer', $this->Offer->find('all', array('conditions' => array($id => $this->request->data['Offer']['placeid']))));
     }
