@@ -72,7 +72,8 @@
                                         <ul class="dropdown-menu">
                                             <li><?php echo $this->Html->link('Veure espais', array(
                                                     'controller' => 'places',
-                                                    'action' => 'index'
+                                                    'action' => 'index',
+                                                    <?= $this->Session->read('Auth.User.id'); ?>
                                                 )); ?></li>
                                             <li><?php echo $this->Html->link('Afegir espai', array(
                                                     'controller' => 'places',

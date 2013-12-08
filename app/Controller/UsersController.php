@@ -19,6 +19,8 @@ class UsersController extends AppController {
     public function view($id = null) {
         $this->User->id = $id;
         $this->set('user', $this->User->read());
+        $conditions = array("Place.ownerid" => $id);
+        $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
         $authid = $this->Session->read('Auth.User.id');
         $conditions = array("$authid" => $id);
         $this->set('isOwner', $conditions);
