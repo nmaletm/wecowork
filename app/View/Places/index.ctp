@@ -24,7 +24,6 @@
 							<th>Teléfon</th>
 							<th>Adreça</th>
 							<th></th>
-							<th></th>
 						</tr>
 				 	</thead>
 				 	<tbody>
@@ -42,8 +41,6 @@
 									<button type="button" class="btn btn-primary btn-sm">
   										<span class="glyphicon glyphicon-edit"></span> Editar
 									</button>
-								</td>
-								<td>
 									<button type="button" class="btn btn-danger btn-sm">
   										<span class="glyphicon glyphicon-remove-circle"></span>
 									</button>
