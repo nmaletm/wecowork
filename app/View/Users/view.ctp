@@ -85,12 +85,12 @@
 			<span class="glyphicon glyphicon-envelope"> 
 			</span>
 			<b>E-mail</b>
-			<?php echo $user->email; ?>
+			<?php echo $user['User']['email']; ?>
 			<br>
 			<span class="glyphicon glyphicon-globe"> 
 			</span>
 			<b>Website</b>
-			<a href="<?php echo $user->website; ?>"> <?php echo $user['User']['website']; ?> </a>
+			<a href="<?php echo $user['User']['website']; ?>"> <?php echo $user['User']['website']; ?> </a>
 		</div>
 		<? if (!$isOwner) { ?>
 			<br>
