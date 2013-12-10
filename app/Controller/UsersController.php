@@ -16,8 +16,7 @@ class UsersController extends AppController {
 
     public function view($id = null) {
         $this->User->id = $id;
-        $this->User->read();
-        $viewUser = $this->User;
+        $viewUser = $this->User->read();
         $this->set('user', $viewUser);
         $this->set('isProfileCompany', $viewUser->isCompany());
         $conditions = array("Place.ownerid" => $id);
