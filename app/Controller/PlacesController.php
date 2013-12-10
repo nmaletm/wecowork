@@ -10,8 +10,9 @@ class PlacesController extends AppController {
     }
 	
 	public function view($id = null) {
-        $place = $this->Place->id = $id;
-        $this->set('place', $this->Place->read());
+        $this->Place->id = $id;
+        $place = $this->Place->read();
+        $this->set('place', $place);
         $placeConditions = array("Offer.placeid" => $id);
 		$this->set('offers', $this->Offer->find('all', array('conditions' => $placeConditions)));
 		$opinionConditions = array("Opinion.placeid" => $id);
