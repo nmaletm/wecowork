@@ -100,40 +100,25 @@
 			</a>
 
 			<!-- Contact Modal -->
-<!-- Modal -->
-<div class="modal fade" id="contactOwnerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+			<div class="modal fade" id="contactOwnerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="myModalLabel">Quin és el teu missatge per <?php echo $user['User']['username']; ?> ? </h4>
+			      </div>
+			      <div class="modal-body">
+								<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5"></textarea>
+			      </div>
+			      <div class="modal-footer">
+								<button class="btn" data-dismiss="modal" aria-hidden="true">Tancar</button>
+								<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Enviar</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
 
-		<!--
-			<div id="contactOwnerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-header">
-					<h3> Quin és el teu missatge per <?php echo $user['User']['username']; ?> ? </h3>
-				</div>
-				<div class="modal-body">
-					<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5"></textarea>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal" aria-hidden="true">Tancar</button>
-					<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Enviar</button>
-				</div>
-			</div>
-
-		-->
+		
 		<? } ?>
 	</div>
 </div>
