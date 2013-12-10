@@ -108,7 +108,7 @@
 			        <h4 class="modal-title" id="myModalLabel">Quin és el teu missatge per <?php echo $user['User']['username']; ?> ? </h4>
 			      </div>
 			      <div class="modal-body">
-								<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5"></textarea>
+								<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5" style="width: 100%; border: 0;"></textarea>
 			      </div>
 			      <div class="modal-footer">
 								<button class="btn" data-dismiss="modal" aria-hidden="true">Tancar</button>
