@@ -117,8 +117,8 @@
 								</ul>
 <? }else{ ?>
 
-                                <a href="/users/add" style="margin-right:5px" class="btn btn-md btn-default navbar-btn pull-right">Registre</a>
-                                <a href="/users/login" class="btn btn-md btn-primary navbar-btn pull-right">Iniciar sessió</a>
+                                <a href="/users/add" class="btn btn-md btn-default navbar-btn pull-right">Registre</a>
+                                <a href="/users/login" style="margin-right:5px" class="btn btn-md btn-primary navbar-btn pull-right">Iniciar sessió</a>
 <? } ?>
 
                         </div>

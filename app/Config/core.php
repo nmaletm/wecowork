@@ -380,4 +380,3 @@ Cache::config('_cake_model_', array(
 ));
 
 
-Configure::write('debug', 1);
