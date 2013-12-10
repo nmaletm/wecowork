@@ -15,7 +15,7 @@
 											array(
 													'controller' => 'places', 
 													'action' => 'index', 
-													$user->id]
+													$user->id
 												),
 											array('class' => 'btn btn-primary pull-right')
 										); ?>
