@@ -15,7 +15,7 @@
 											array(
 													'controller' => 'places', 
 													'action' => 'index', 
-													$user['User']['id']
+													$user->id]
 												),
 											array('class' => 'btn btn-primary pull-right')
 										); ?>
@@ -73,36 +73,36 @@
 	</div>
 	<div id="user_info_tab" class="col-md-4">
 		<div class="user_avatar">
-			<div style="width:180px; height:180px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $user['User']['username']; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
+			<div style="width:180px; height:180px; background:url('/img/photo.php?filetype=png&type=users&id=<?php echo $user->username; ?>&default=no_user') center center; background-size: cover;" class="img-rounded">
 			</div>
 			
-			<h2 class="fn"> <?php echo $user['User']['name']; ?> </h2>
+			<h2 class="fn"> <?php echo $user->name; ?> </h2>
 			<p>
-				<em> <?php echo $user['User']['username']; ?> </em>
+				<em> <?php echo $user->username; ?> </em>
 			</p>
 		</div>
 		<div class="user_info">
 			<span class="glyphicon glyphicon-envelope"> 
 			</span>
 			<b>E-mail</b>
-			<?php echo $user['User']['email']; ?>
+			<?php echo $user->email; ?>
 			<br>
 			<span class="glyphicon glyphicon-globe"> 
 			</span>
 			<b>Website</b>
-			<a href="<?php echo $user['User']['website']; ?>"> <?php echo $user['User']['website']; ?> </a>
+			<a href="<?php echo $user->website; ?>"> <?php echo $user->website; ?> </a>
 		</div>
 		<? if (!$isOwner) { ?>
 			<br>
 			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md" data-toggle="modal">
 	  				<span class="glyphicon glyphicon-send"></span> 
-	  				Contactar amb <?php echo $user['User']['username']; ?>
+	  				Contactar amb <?php echo $user->username; ?>
 			</a>
 
 			<!-- Contact Modal -->
 			<div id="contactOwnerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-header">
-					<h3> Quin és el teu missatge per <?php echo $user['User']['username']; ?> ? </h3>
+					<h3> Quin és el teu missatge per <?php echo $user->username; ?> ? </h3>
 				</div>
 				<div class="modal-body">
 					<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5"></textarea>
