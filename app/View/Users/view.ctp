@@ -49,9 +49,9 @@
 				 </table>
 			</div>
 		</section>
+		<br>
+		<br>
 		<? } ?>
-		<br>
-		<br>
 		<? if($isOwner) { ?>
 			<section id="messages" class="section_card" style="border-radius:5px; border-style:solid; border-width:1px; border-color:#d9d9d9">
 				<div class="header" style="border-style:solid; border-width:1px; border-color:#d9d9d9; border-radius:5px;background-color: #fafafa ;box-shadow: 0 1px 6px #d9d9d9; padding-top: 1px; padding-right:10px; padding-left:10px; padding-bottom:10px">
@@ -100,6 +100,26 @@
 			</a>
 
 			<!-- Contact Modal -->
+<!-- Modal -->
+<div class="modal fade" id="contactOwnerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+		<!--
 			<div id="contactOwnerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-header">
 					<h3> Quin és el teu missatge per <?php echo $user['User']['username']; ?> ? </h3>
@@ -112,6 +132,8 @@
 					<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Enviar</button>
 				</div>
 			</div>
+
+		-->
 		<? } ?>
 	</div>
 </div>
