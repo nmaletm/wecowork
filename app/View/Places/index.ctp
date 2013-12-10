@@ -17,38 +17,41 @@
 				
 			</div>
 			<div class="body" style="padding-top:5px">
-				<!-- loop to print all the offers -->
-				<?php foreach ($places as $place): ?>
-					<h4>
-						<?php echo $this->Html->link($place['Place']['name'],
-						array('controller' => 'places', 'action' => 'view', 
-						$place['Place']['id'])); ?>
-
-						<button type="button" class="btn btn-primary btn-sm pull-right">
-  							<span class="glyphicon glyphicon-edit"></span> Editar
-						</button>
-						<button type="button" class="btn btn-danger btn-sm pull-right">
-							<span class="glyphicon glyphicon-remove-circle"></span> Esborrar
-						</button>
-					</h4>
-					<table class="table">
-					 	<thead>
-					 		<tr>
-								<th>Teléfon</th>
-								<th>Adreça</th>
-								<th>Web</th>
-								<th>Informació Adicional</th>
-							</tr>
-					 	</thead>
-				 		<tbody>
+				<table class="table">
+				 	<thead>
+				 		<tr>
+							<th>Nom</th>
+							<th>Teléfon</th>
+							<th>Adreça</th>
+							<th>Web</th>
+							<th>Informació Adicional</th>
+							<th></th>
+						</tr>
+				 	</thead>
+				 	<tbody>
+						<!-- loop to print all the offers -->
+						<?php foreach ($places as $place): ?>
 							<tr>
+								<td>
+									<?php echo $this->Html->link($place['Place']['name'],
+									array('controller' => 'places', 'action' => 'view', 
+									$place['Place']['id'])); ?>
+								</td>
 								<td><?php echo $place['Place']['phone']; ?></td>
 								<td><?php echo $place['Place']['address']; ?></td>
 								<td><?php echo $place['Place']['website']; ?></td>
 								<td><?php echo $place['Place']['aditionalinfo']; ?></td>
+								<td>
+									<button type="button" class="btn btn-primary btn-sm pull-right">
+  										<span class="glyphicon glyphicon-edit"></span> Editar
+									</button>
+									<button type="button" class="btn btn-danger btn-sm pull-right">
+  										<span class="glyphicon glyphicon-remove-circle"></span> Esborrar
+									</button>
+								</td>
 							</tr>
-						</tbody>
+						<?php endforeach; ?>
+					</tbody>
 				 </table>
-				 <?php endforeach; ?>
 			</div>
 		</section>
