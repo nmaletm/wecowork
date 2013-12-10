@@ -25,4 +25,3 @@
 		)); ?>
 	</div>
 <?php echo $this->Form->end(); ?>
-<a href="add" class="btn btn-default">Registre</a>

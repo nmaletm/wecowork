@@ -26,6 +26,7 @@
 							<th>Web</th>
 							<th>Informació Adicional</th>
 							<th></th>
+							<th></th>
 						</tr>
 				 	</thead>
 				 	<tbody>
@@ -45,6 +46,8 @@
 									<button type="button" class="btn btn-primary btn-sm pull-right">
   										<span class="glyphicon glyphicon-edit"></span> Editar
 									</button>
+								</td>
+								<td>
 									<button type="button" class="btn btn-danger btn-sm pull-right">
   										<span class="glyphicon glyphicon-remove-circle"></span> Esborrar
 									</button>

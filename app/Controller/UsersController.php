@@ -11,14 +11,14 @@ class UsersController extends AppController {
 
     public function index() {
         $user = $this->Auth->user();
-        $this->set('user', $user);
-        $conditions = array("Place.ownerid" => $user['id']);
-        $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
+        $this->redirect(array('action' => 'view', $user['id']));
     }
 
     public function view($id = null) {
         $this->User->id = $id;
-        $this->set('user', $this->User->read());
+        $viewUser = $this->User->read();
+        $this->set('user', $viewUser);
+        $this->set('isProfileCompany', $viewUser['type'] == self::$companyType);
         $conditions = array("Place.ownerid" => $id);
         $this->set('places', $this->Place->find('all', array('conditions' => $conditions)));
         $user = $this->Auth->user();
