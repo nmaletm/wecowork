@@ -18,7 +18,7 @@ class PlacesController extends AppController {
 		$opinionConditions = array("Opinion.placeid" => $id);
 		$this->set('opinions', $this->Opinion->find('all', array('conditions' => $opinionConditions)));
         $user = $this->Auth->user();
-        $this->set('isOwner', $user['id'] == $place['ownerid']);
+        $this->set('isOwner', $user['id'] == $place['Place']['ownerid']);
         //trying to show the offers from a place
         //$this->set('offer', $this->Offer->find('all', array('conditions' => array($id => $this->request->data['Offer']['placeid']))));
     }
