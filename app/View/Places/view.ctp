@@ -133,24 +133,29 @@
 		<br>
 		<div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 		<br>
-		<button href="#contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal" style="margin-top: 10px;">
-  				<span class="glyphicon glyphicon-send"></span> 
-  				Contactar amb el propietari
-		</button>
+			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md" data-toggle="modal">
+	  				<span class="glyphicon glyphicon-send"></span> 
+	  				Contactar amb l'espai
+			</a>
 
-		<!-- Contact Modal -->
-		<div id="contactOwnerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-header">
-				<h3> Quin és el teu missatge pel propietari de l'espai? </h3>
-			</div>
-			<div class="modal-body">
-				<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5"></textarea>
-			</div>
-			<div class="modal-footer">
-				<button class="btn" data-dismiss="modal" aria-hidden="true">Tancar</button>
-				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Enviar</button>
-			</div>
-		</div>
+<!-- Contact Modal -->
+			<div class="modal fade" id="contactOwnerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="myModalLabel">Quin és el teu missatge per l'espai ? </h4>
+			      </div>
+			      <div class="modal-body">
+								<textarea class="required" name="the_text" placeholder="Escriu aqui el teu missatge" cols="30" rows="5" style="width: 100%; border: 0;"></textarea>
+			      </div>
+			      <div class="modal-footer">
+								<button class="btn" data-dismiss="modal" aria-hidden="true">Tancar</button>
+								<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Enviar</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
 	</div>
 </div>
 <script>
