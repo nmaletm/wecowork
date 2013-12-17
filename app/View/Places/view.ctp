@@ -133,7 +133,7 @@
 		<br>
 		<div id="map_canvas" class="pull-right" style="width: 300px; height: 300px; background-color: #CCC"></div>
 		<br>
-			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md" data-toggle="modal">
+			<a href="#contactOwnerModal" type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal" style="margin-top: 20px;">
 	  				<span class="glyphicon glyphicon-send"></span> 
 	  				Contactar amb l'espai
 			</a>
